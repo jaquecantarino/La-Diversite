@@ -5,9 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityPsicologosBinding
-import br.com.alana.ladiversite.utils.Utils
 
 class PsicologosActivity : AppCompatActivity() {
 
@@ -18,9 +16,9 @@ class PsicologosActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
-        binding.cardPsico1.setOnClickListener { Utils.acessarLink(getString(R.string.psico_url1), this) }
-        binding.cardPsico2.setOnClickListener { Utils.acessarLink(getString(R.string.psico_url2), this) }
-        binding.cardPsico3.setOnClickListener { Utils.acessarLink(getString(R.string.psico_url3), this) }
+        binding.cardPsico1.setOnClickListener {  }
+        binding.cardPsico2.setOnClickListener {  }
+        binding.cardPsico3.setOnClickListener {  }
     }
     companion object {
         fun startPsico(context: Context): Intent {

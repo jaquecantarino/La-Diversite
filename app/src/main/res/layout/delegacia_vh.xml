@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_delegacia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_card_delegacia"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="2dp"
+            android:paddingStart="21dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="21dp">
+
+            <TextView
+                android:id="@+id/nome_delegacia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/delegacia"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/endereco_deleg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/endereco_acolhida" />
+
+            <TextView
+                android:id="@+id/endereco_delegacia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/endereco_acolhida" />
+
+            <TextView
+                android:id="@+id/telefone_deleg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/telefone_delegacia" />
+
+            <TextView
+                android:id="@+id/telefone_delegacia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/telefone_delegacia" />
+
+            <TextView
+                android:id="@+id/publico_alvo_deleg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/p_blico_alvo" />
+
+            <TextView
+                android:id="@+id/publico_alvo_delegacia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/p_blico_alvo" />
+
+            <TextView
+                android:id="@+id/atividades_deleg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/atividades" />
+
+            <TextView
+                android:id="@+id/atividades_delegacia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="@string/atividades" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

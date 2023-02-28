@@ -11,5 +11,10 @@ class Utils {
             url.data = Uri.parse(urlExterna)
             context.startActivity(url)
         }
+
+        fun removeNonDigits(tel: String): String {
+            val regex = Regex("\\D")
+            return regex.replace(tel, "")
+        }
     }
 }

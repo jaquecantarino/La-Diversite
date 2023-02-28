@@ -10,7 +10,7 @@
     <string name="que_bom_n_que_voc_n_voltou">Que bom \n que você\n voltou :)</string>
     <string name="entre_com_seu_e_mail">Entre com seu e-mail</string>
     <string name="entre_com_sua_senha">Entre com sua senha</string>
-    <string name="bairro">Bairro:</string>
+    <string name="endereco_acolhida">Endereço:</string>
     <string name="p_blico_alvo">Público alvo:</string>
     <string name="nome_da_casa">Nome da casa</string>
     <string name="emerg_ncia_190">emergência 190</string>
@@ -21,5 +21,58 @@
     <string name="user_auth_ok">Usuário autenticado com sucesso!</string>
     <string name="user_auth_nok">Falha na autenticação!</string>
     <string name="email_valid">Digite um e-mail válido!</string>
+    <string name="casa_obrig">Nome da Casa é obrigatório!</string>
+    <string name="telefone_obrig">Telefone é obrigatório!</string>
     <string name="senha_valid">Senha deve conter no mínimo 6 dígitos!</string>
+    <string name="endere_o">Endereço:</string>
+    <string name="telefone">Telefone:</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="servi_o_prestado">Serviço Prestado:</string>
+    <string name="delegacia">Delegacia</string>
+    <string name="atividades">Atividades:</string>
+    <string name="telefone_delegacia">Telefone</string>
+    <string name="ligando">Ligando para Delegacia…</string>
+    <string name="contato_emerg_ncia">Contato de Emergência</string>
+    <string name="emerg_ncia">Emergência</string>
+    <string name="este_bot_o_faz_uma_liga_o_para_o_contato_de_emerg_ncia_cadastrado">Aqui você pode cadastrar, editar e excluir o seu contado de emergência.</string>
+    <string name="nome">Nome</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="excluir">Excluir contato</string>
+    <string name="telefone_detalhe_acolhida">Telefone:</string>
+    <string name="e_mail_detalhe_acolhida">E-mail:</string>
+    <string name="acolhimento_boolean">Acolhimento:</string>
+    <string name="atividades_acolhida_detalhe">Atividades:</string>
+    <string name="jusbrasil">JusBrasil</string>
+    <string name="text_jus">A sua principal fonte de informação jurídica.</string>
+    <string name="link_jus">Site: https://www.jusbrasil.com.br/legislacao</string>
+    <string name="jusbrasil_url">https://jusbrasil.com.br/legislacao</string>
+
+    <string name="psicologia_acess_vel">Psicologia Acessível</string>
+    <string name="psico1_text">Diversos serviços de Terapia Gratuita, ou com preços acessíveis em São Paulo.</string>
+    <string name="psico1_link">Site: https://www.psicologiasemfronteiras.com.br/p/consulta-psicologica-gratuita.html</string>
+    <string name="psico_url1">https://www.psicologiasemfronteiras.com.br/p/consulta-psicologica-gratuita.html</string>
+
+    <string name="psicologia2_acess_vel">Mundos Psicológicos</string>
+    <string name="psico2_text">Encontre aqui a ajuda dos melhores especialistas em psicologia e faça terapia online, telefônica ou presencial.</string>
+    <string name="psico2_link">Site: https://br.mundopsicologos.com</string>
+    <string name="psico_url2">https://br.mundopsicologos.com</string>
+
+    <string name="psicologia3_acess_vel">Doctoralia</string>
+    <string name="psico3_text">Especialistas em psicologia Social.</string>
+    <string name="psico3_link">Site: https://www.doctoralia.com.br/servicos-de-tratamento/psicologia-social/sao-paulo</string>
+    <string name="psico_url3">https://www.doctoralia.com.br/servicos-de-tratamento/psicologia-social/sao-paulo</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="title_activity_contato_emergencia_maps">ContatoEmergenciaMapsActivity</string>
+    <string name="enviar_mensagem_whatsapp">Enviar mensagem Whatsapp!</string>
+    <string name="msg_whats_btn">Envia mensagem e localização para contato de emergência via WhatsApp e SMS!</string>
+    <string name="msg_sms_btn">Enviar mensagem e localização para contato de emergência via SMS! *Pode gerar custos na operadora.</string>
+    <string name="msg_call_btn">Faz uma chamada via operadora móvel para seu contado de emergência!</string>
+    <string name="casas_de_acolhida">Casas de Acolhida</string>
+    <string name="casa_de_acolhida_detalhe">Casa de Acolhida Detalhe</string>
+    <string name="delegacias_especializadas">Delegacias Especializadas</string>
+    <string name="leis_e_direitos">Leis e Direitos</string>
+    <string name="psic_logos_e_terapeutas_de_apoio">Psicólogos e Terapeutas de Apoio</string>
+    <string name="acolhimento">Acolhimento:</string>
+    <string name="sugerir_nova_casa">Sugerir nova Casa</string>
 </resources>

@@ -5,9 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityLeisBinding
-import br.com.alana.ladiversite.utils.Utils
 
 class LeisActivity : AppCompatActivity() {
 
@@ -17,7 +15,7 @@ class LeisActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
-        binding.cardLeis.setOnClickListener{ Utils.acessarLink(getString(R.string.jusbrasil_url), this) }
+        binding.cardLeis.setOnClickListener{  }
     }
 
     companion object {

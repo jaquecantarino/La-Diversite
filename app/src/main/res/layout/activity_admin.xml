@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.AcolhidaActivity">
+    tools:context=".presentation.AdminActivity">
 
     <TextView
         android:id="@+id/label_contato_emergencia"
@@ -14,43 +14,11 @@
         android:layout_marginTop="42dp"
         android:fontFamily="@font/poppinssemibold"
         android:gravity="center"
-        android:text="@string/casas_de_acolhida"
+        android:text="Admin - Aprovações"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/aprovar_btn"
-        android:layout_width="100dp"
-        android:layout_height="20dp"
-        android:background="@drawable/round_corner_btn_dark"
-        android:backgroundTint="@color/primary_4"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="gone"
-        android:text="Admin"
-        android:textColor="@color/white"
-        android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cadastro_casa"
-        app:layout_constraintTop_toTopOf="@+id/cadastro_casa" />
-
-    <Button
-        android:id="@+id/cadastro_casa"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:background="@drawable/round_corner_btn_dark"
-        android:backgroundTint="@color/primary_4"
-        android:text="@string/sugerir_nova_casa"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:textSize="11sp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -66,7 +34,7 @@
         android:id="@+id/nested"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -79,10 +47,29 @@
                 android:id="@+id/recycler_acolhida"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/acolhida_vh"
+                android:visibility="visible"
+                tools:listitem="@layout/acolhida_admin_vh"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/message_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="Não há aprovações pendentes!\n\n :)"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

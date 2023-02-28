@@ -16,22 +16,11 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
-        getDadosAcolhida()
-
         binding.cardDetalheAcolhida.setOnClickListener{
             val tel = binding.telefoneDetalhe.text.toString()
             if (tel.isNotEmpty())
-                Discador.ligarTelefone(tel, this)
+                Discador.ligarTelefone(tel, this, this@AcolhidaDetalheActivity)
         }
-    }
-
-    private fun getDadosAcolhida(){
-        binding.nomeCasaDetalhe.text = intent.getStringExtra("nomeCasa")
-        binding.enderecoDetalheLabel.text = intent.getStringExtra("endereco")
-        binding.publicoAlvoDetalhe.text = intent.getStringExtra("publico")
-        binding.telefoneDetalhe.text = intent.getStringExtra("telefone")
-        binding.emailDetalhe.text = intent.getStringExtra("email")
-        binding.servicosDetalhe.text = intent.getStringExtra("servico")
     }
 
     companion object {
@@ -41,6 +30,7 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
                                  publico: String?,
                                  telefone: String?,
                                  email: String?,
+                                 acolhimento: String?,
                                  servico: String?): Intent {
             val intentDetalhes = Intent(context, AcolhidaDetalheActivity::class.java)
             intentDetalhes.apply {
@@ -49,6 +39,7 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
                 putExtra("publico", publico)
                 putExtra("telefone", telefone)
                 putExtra("email", email)
+                putExtra("acolhimento", acolhimento)
                 putExtra("servico", servico)
             }
             return intentDetalhes

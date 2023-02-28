@@ -22,16 +22,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/label_login"
-            android:layout_marginStart="40dp"
-            android:textSize="30sp"
-            android:fontFamily="@font/poppinsbold"
-            android:textColor="@color/primary_2"
-            android:layout_marginTop="75dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/que_bom_n_que_voc_n_voltou" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/label_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="163dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/que_bom_n_que_voc_n_voltou"
+                android:textColor="@color/primary_2"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -92,11 +103,12 @@
                 android:layout_width="144dp"
                 android:layout_height="51dp"
                 android:layout_marginStart="142dp"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="142dp"
                 android:background="@drawable/round_corner_btn_dark"
                 android:backgroundTint="@color/primary_4"
+                android:clickable="true"
+                android:focusable="true"
                 android:fontFamily="@font/poppinsmedium"
                 android:inputType="textCapSentences"
                 android:text="@string/login"
@@ -106,8 +118,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/senha_login"
-                tools:ignore="TextViewEdits"
-                android:focusable="true" />
+                tools:ignore="TextViewEdits" />
+
+            <TextView
+                android:id="@+id/recuperar_senha"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:text="@string/esqueci_minha_senha"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_btn_screen" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

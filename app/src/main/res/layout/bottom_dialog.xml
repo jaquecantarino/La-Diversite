@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+
+        <!--image view for displaying course image-->
+        <ImageView
+            android:id="@+id/idIVCourse"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logo" />
+
+        <!--text view for displaying course name-->
+        <TextView
+            android:id="@+id/bottom_title_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:text="Confirmar exclusão?"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--text view for displaying course tracks-->
+        <TextView
+            android:id="@+id/txt_yes_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottom_title_label"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:text="Tem certeza que deseja excluir essa casa?"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <!--text view for displaying course duration-->
+        <TextView
+            android:id="@+id/txt_label_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_yes_no"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:text="Caso confime, essa ação é irreversível!"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_below="@+id/idIVCourse"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/confimar_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green_accept"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Confirmar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/cancelar_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red_deny"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Cancelar"
+            android:textAllCaps="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
