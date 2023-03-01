@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".presentation.PreLoginActivity">
+
+    <ImageView
+        android:id="@+id/logo_Diversite"
+        android:layout_width="286dp"
+        android:layout_height="414dp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner_btn"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppinsmedium"
+        android:inputType="textCapSentences"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/logo_Diversite"
+        app:layout_constraintStart_toStartOf="@+id/logo_Diversite"
+        app:layout_constraintTop_toBottomOf="@+id/logo_Diversite"
+        tools:ignore="TextViewEdits" />
+
+    <Button
+        android:id="@+id/cadastre_btn"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner_btn"
+        android:backgroundTint="@color/white"
+        android:inputType="textCapSentences"
+        android:text="@string/ou_cadastre_se"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/login_btn"
+        app:layout_constraintStart_toStartOf="@+id/login_btn"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        tools:ignore="TextViewEdits" />
+
+    <Button
+        android:id="@+id/emergencia_btn"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner_btn"
+        android:backgroundTint="@color/white"
+        android:inputType="textCapSentences"
+        android:text="@string/emerg_ncia_190"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cadastre_btn"
+        app:layout_constraintStart_toStartOf="@+id/cadastre_btn"
+        app:layout_constraintTop_toBottomOf="@+id/cadastre_btn"
+        tools:ignore="TextViewEdits" />
+
+    <View
+        android:id="@+id/circulo"
+        android:layout_width="718dp"
+        android:layout_height="751dp"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_Diversite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".presentation.LoginActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_login"
+        android:layout_width="350dp"
+        android:layout_height="635dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="48dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/label_login"
+            android:layout_marginStart="40dp"
+            android:textSize="30sp"
+            android:fontFamily="@font/poppinsbold"
+            android:textColor="@color/primary_2"
+            android:layout_marginTop="75dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/que_bom_n_que_voc_n_voltou" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/login_screen"
+            android:layout_width="429dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="-40dp"
+            android:background="@drawable/logo_cad_login">
+
+            <TextView
+                android:id="@+id/email_label_cadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="90dp"
+                android:text="@string/entre_com_seu_e_mail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/email_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/email_label_cadastro"
+                app:layout_constraintTop_toBottomOf="@+id/email_label_cadastro"/>
+
+            <TextView
+                android:id="@+id/senha_cadstro_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/entre_com_sua_senha"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/email_login"
+                app:layout_constraintTop_toBottomOf="@+id/email_login" />
+
+            <EditText
+                android:id="@+id/senha_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="textPassword"
+                app:layout_constraintStart_toStartOf="@+id/senha_cadstro_label"
+                app:layout_constraintTop_toBottomOf="@+id/senha_cadstro_label" />
+
+            <Button
+                android:id="@+id/login_btn_screen"
+                android:layout_width="144dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="142dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:layout_marginEnd="142dp"
+                android:background="@drawable/round_corner_btn_dark"
+                android:backgroundTint="@color/primary_4"
+                android:fontFamily="@font/poppinsmedium"
+                android:inputType="textCapSentences"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/senha_login"
+                tools:ignore="TextViewEdits"
+                android:focusable="true" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

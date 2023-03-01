@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">La Diversite</string>
+    <string name="la_diversite_title">La Diversité</string>
+    <string name="ou_cadastre_se">ou cadastre-se</string>
+    <string name="login">Login</string>
+    <string name="cria_sua_conta">Cria sua\n conta :)</string>
+    <string name="entre_com_um_e_mail_v_lido">Entre com um e-mail válido</string>
+    <string name="informe_uma_senha">Informe uma senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="que_bom_n_que_voc_n_voltou">Que bom \n que você\n voltou :)</string>
+    <string name="entre_com_seu_e_mail">Entre com seu e-mail</string>
+    <string name="entre_com_sua_senha">Entre com sua senha</string>
+    <string name="bairro">Bairro:</string>
+    <string name="p_blico_alvo">Público alvo:</string>
+    <string name="nome_da_casa">Nome da casa</string>
+    <string name="emerg_ncia_190">emergência 190</string>
+    <string name="cadastro_ok">Cadastro efetuado com sucesso!</string>
+    <string name="cadastro_nok">Falha no cadastro, tente novamente!</string>
+    <string name="email_obrigatorio">E-mail deve ser preenchido!</string>
+    <string name="senha_obrigatorio">Senha deve ser preenchido!</string>
+    <string name="user_auth_ok">Usuário autenticado com sucesso!</string>
+    <string name="user_auth_nok">Falha na autenticação!</string>
+    <string name="email_valid">Digite um e-mail válido!</string>
+    <string name="senha_valid">Senha deve conter no mínimo 6 dígitos!</string>
+</resources>

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "534322933518",
+    "project_id": "la-diversite",
+    "storage_bucket": "la-diversite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534322933518:android:5a0e46bb12011fd116b15f",
+        "android_client_info": {
+          "package_name": "br.com.alana.ladiversite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534322933518-n51jii5a7f788c2tlvlhi87fnlcngqtm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBES9zFhLGKmHv4bNodsxB7Y833dfIdWBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534322933518-n51jii5a7f788c2tlvlhi87fnlcngqtm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534322933518:android:2ad5f19b649d9f1f16b15f",
+        "android_client_info": {
+          "package_name": "br.com.ladiversite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534322933518-n51jii5a7f788c2tlvlhi87fnlcngqtm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBES9zFhLGKmHv4bNodsxB7Y833dfIdWBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534322933518-n51jii5a7f788c2tlvlhi87fnlcngqtm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
