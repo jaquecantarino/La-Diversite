@@ -25,7 +25,7 @@ class UsuarioCadastroActivity : AppCompatActivity() { //extende o arquivo AppCom
     private val binding: ActivityUsuarioCadastroBinding by lazy { ActivityUsuarioCadastroBinding.inflate(layoutInflater) } //instancia o visual da pagina, que vem da pasta layout
     private lateinit var auth: FirebaseAuth //instancia o Firebase
 
-    //metodo create, aqui ele ta instanciando a parte da tela?
+    //metodo create, aqui ele ta instanciando a parte da tela
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
