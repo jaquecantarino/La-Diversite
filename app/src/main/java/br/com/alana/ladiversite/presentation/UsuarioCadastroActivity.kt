@@ -19,11 +19,13 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.android.HandlerDispatcher
 import org.w3c.dom.Text
 
-class UsuarioCadastroActivity : AppCompatActivity() {
+//Arquivo de ação, controla o efetuar cadastro
+class UsuarioCadastroActivity : AppCompatActivity() { //extende o arquivo AppCompat, que é um arquivo padrão do android (quais configs ele traz?)
 
-    private val binding: ActivityUsuarioCadastroBinding by lazy { ActivityUsuarioCadastroBinding.inflate(layoutInflater) }
-    private lateinit var auth: FirebaseAuth
+    private val binding: ActivityUsuarioCadastroBinding by lazy { ActivityUsuarioCadastroBinding.inflate(layoutInflater) } //instancia o visual da pagina, que vem da pasta layout
+    private lateinit var auth: FirebaseAuth //instancia o Firebase
 
+    //metodo create, aqui ele ta instanciando a parte da tela?
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
@@ -36,6 +38,7 @@ class UsuarioCadastroActivity : AppCompatActivity() {
         }
 
     }
+    //metodo oficial, onde os atributos são definidos, neste caso e-mail e senha,
     private fun efetuaCadastro(email: String, senha: String ){
         binding.cadastrarBtn.isEnabled = false
         if (!ValidadorDados.isValidEmail(email)){
