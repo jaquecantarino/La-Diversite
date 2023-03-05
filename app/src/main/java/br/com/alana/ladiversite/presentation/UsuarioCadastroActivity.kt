@@ -19,7 +19,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.android.HandlerDispatcher
 import org.w3c.dom.Text
 
-//Arquivo de ação, controla o efetuar cadastro
+//Arquivo de ação, controla o efetuar cadastro - classe de cadastro
 class UsuarioCadastroActivity : AppCompatActivity() { //extende o arquivo AppCompat, que é um arquivo padrão do android (quais configs ele traz?)
 
     private val binding: ActivityUsuarioCadastroBinding by lazy { ActivityUsuarioCadastroBinding.inflate(layoutInflater) } //instancia o visual da pagina, que vem da pasta layout
@@ -31,7 +31,7 @@ class UsuarioCadastroActivity : AppCompatActivity() { //extende o arquivo AppCom
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
-        auth = Firebase.auth
+        auth = Firebase.auth //validador
 
         binding.cadastrarBtn.setOnClickListener {
            cadastrarUser()
@@ -58,7 +58,7 @@ class UsuarioCadastroActivity : AppCompatActivity() { //extende o arquivo AppCom
                 } else {
                     Toast.makeText(this, getText(R.string.cadastro_nok),
                         Toast.LENGTH_SHORT).show()
-                    clearFields()
+                    clearFields() //depois do login efetuado limpa os campo com o metodo criado na linha 87
                     binding.cadastrarBtn.isEnabled = true
                 }
             }
@@ -66,29 +66,31 @@ class UsuarioCadastroActivity : AppCompatActivity() { //extende o arquivo AppCom
     }
 
     private fun cadastrarUser(){
+        //inicio das validações para cadastro
         if (TextUtils.isEmpty(binding.emailCadastro.text)){
-            binding.emailCadastro.error = getText(R.string.email_obrigatorio)
+            binding.emailCadastro.error = getText(R.string.email_obrigatorio) //validação de string vem do xml da pasta values no res
             binding.cadastrarBtn.isEnabled = true
         } else if (TextUtils.isEmpty(binding.senhaCadastro.text)) {
             binding.senhaCadastro.error = getText(R.string.senha_obrigatorio)
-            binding.cadastrarBtn.isEnabled = true
+            binding.cadastrarBtn.isEnabled = true //isEnabled confere se o preenchimento automático está ativado
         } else {
             efetuaCadastro(binding.emailCadastro.text.toString(),
                 binding.senhaCadastro.text.toString())
         }
     }
 
-    private fun delay(){
+    private fun delay(){ //? - tempo para carregar a pagina
         Handler().postDelayed({
             finish()
         }, 2000)
     }
 
-    private fun clearFields(){
+    private fun clearFields(){ //metodo criado para limpar os campos
         binding.emailCadastro.text.clear()
         binding.senhaCadastro.text.clear()
     }
 
+    //metodo criado para chamada na tela inicial pelo botão
     companion object {
         fun startCadastroUser(context: Context): Intent {
             val intent = Intent(context, UsuarioCadastroActivity::class.java)
