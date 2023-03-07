@@ -20,9 +20,11 @@ Pessoas denominadas minorias pela sociedade como os indivíduos LGBTQIA+ e outro
 A violência está seletiva e não imposta a todos da mesma forma e, como consequência, passou a ser categorizada por grupos.   
 Entre as possíveis questões relacionadas ao problema, conseguir soluções para a efetivação de denúncias pode estar alinhado com a não obtenção da informação direcionada para a necessidade específica. 
 #
-## **Ferramenta e linguagem utilizada no desenvolvimento**
-* Kotlin
+## **Ferramenta e Linguagem Utilizada**
 * Android Studio   
+* Firebase
+* Kotlin
+
 #
 ## **Demonstração**
 ![Build](https://img.shields.io/static/v1?label=Versão&message=1.0&color=blue)   
