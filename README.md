@@ -21,9 +21,11 @@ A violência está seletiva e não imposta a todos da mesma forma e, como conseq
 Entre as possíveis questões relacionadas ao problema, conseguir soluções para a efetivação de denúncias pode estar alinhado com a não obtenção da informação direcionada para a necessidade específica. 
 #
 ## **Ferramenta e Linguagem Utilizada**
-* Android Studio   
-* Firebase
-* Kotlin
+|  |  |
+| ------------- | ------------- |
+| IDE | Android Studio |
+| BD  | Firebase  |
+| Linguagem de Programação  | Kotlin  |
 
 #
 ## **Demonstração**
