@@ -1,0 +1,74 @@
+{
+  "delegacias":[
+    {
+      "nome":"Delegacia de Crimes Raciais e Delitos de Intolerância - DECRADI",
+      "endereco":"Rua Brigadeiro Tobias 527 Centro Histórico de São Paulo São Paulo SP 01032001",
+      "telefone":"+55 11 3311-3300",
+      "publico-alvo":"Público Alvo: LGBTQIA+ e pessoas pretas",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência e crimes de violência contra LGBTQIA+ e pessoas pretas."
+    },
+    {
+      "nome":"1ª Delegacia de Defesa da Mulher - DDM Centro",
+      "endereco":"Rua Vieira Ravasco 26 Cambuci São Paulo SP 01518030",
+      "telefone":"+55 11 3275-8000",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"2ª Delegacia de Defesa da Mulher - DDM Sul",
+      "endereco":"Avenida Onze de Junho 89 Vila Clementino São Paulo SP 04041050",
+      "telefone":"+55 11 5084-2579",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"3ª Delegacia de Defesa da Mulher - DDM Oeste",
+      "endereco":"Avenida Corifeu de Azevedo Marques 4300 2° andar Vila Lageado São Paulo SP 05339002",
+      "telefone":"+55 11 3768-4664",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"4ª Delegacia de Defesa da Mulher - DDM Norte",
+      "endereco":"Avenida Itaberaba 731 fundos Feguesia do Ó São Paulo SP 02734000",
+      "telefone":"+55 11 3976-2908",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"5ª Delegacia de Defesa da Mulher - DDM Leste",
+      "endereco":"Rua Doutor Coryntho Baldoíno Costa 400 2º andar Tatuapé São Paulo SP 03069070",
+      "telefone":"+55 11 2293-3816",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"6ª Delegacia de Defesa da Mulher - DDM Sul",
+      "endereco":"Rua Padre José de Anchieta 138 Santo Amaro São Paulo SP 04723001",
+      "telefone":"+55 11 5687-4004",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"7ª Delegacia de Defesa da Mulher - DDM Leste",
+      "endereco":"Rua Sabbado D'Ângelo Itaquera São Paulo SP 08210790",
+      "telefone":"+55 11 2071-4707",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"8ª Delegacia de Defesa da Mulher - DDM Leste",
+      "endereco":"Avenida Osvaldo Valle Cordeiro 190 Jardim Marília São Paulo SP 03584000",
+      "telefone":"+55 11 2742-1701",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    },
+    {
+      "nome":"9ª Delegacia de Defesa da Mulher - DDM Oeste",
+      "endereco":"Avenida Menotti Laudísio 286 2º andar Jardim Cidade Pirituba São Paulo SP 02945-000",
+      "telefone":"+55 11 3976-2908",
+      "publico-alvo":"Público Alvo: Mulheres",
+      "atividades":"Registro de B.O., investigação e acompanhamento de casos de violência contra a mulher."
+    }
+  ]
+}
