@@ -12,5 +12,10 @@ class ValidadorDados {
         fun isValidSenha(senha: String): Boolean{
             return !TextUtils.isEmpty(senha) && senha.length >5
         }
+
+        fun isValidTelefone(telefone: String): Boolean{
+            TODO()
+        }
+
     }
 }
