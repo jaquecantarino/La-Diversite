@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
         preferencias = PreferenceManager.getDefaultSharedPreferences(this)
 
         binding.acolhidaCardHome.setOnClickListener {  }
-        binding.contactEditCardHome.setOnClickListener {  }
+        binding.contactEditCardHome.setOnClickListener { startActivity(ContatoEmergenciaActivity.startContatoEmergencia(this)) }
         binding.delegaCardHome.setOnClickListener {  }
         binding.emergencyCardHome.setOnClickListener { Discador.ligarTelefone("190", this, this@HomeActivity) }
         binding.leisCardHome.setOnClickListener {  }

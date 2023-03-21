@@ -32,14 +32,37 @@ Entre as possíveis questões relacionadas ao problema, conseguir soluções par
 ![Build](https://img.shields.io/static/v1?label=Versão&message=1.0&color=blue)
 ## **Sprint 1**
 ### **Casos de Uso 1 e 2 (Cadastro e Login Usuário)**
-#### **Cadastrar Usuário - CSU001**
+#### **Cadastrar Usuário (CSU001)**
 <p align="center">
 <img src="https://i.imgur.com/pynKVrd.gif" width="267" height="584">
 <p>  
 
-#### **Logar Usuário - CSU002**
+#### **Logar Usuário (CSU002)**
 <p align="center">
 <img src="https://i.imgur.com/6NmXG2w.gif" width="267" height="584">
 <p>  
 
 #
+
+## **Sprint 2**
+### **Caso de Uso 3 (CRUD contato de emergência) (CSU003)**
+#### **Cadastrar Contato Emergencia**
+<p align="center">
+<img src="https://i.imgur.com/D0znYQH.gif" width="267" height="584">
+<p>  
+
+#### **Atualizar Contato de Emergencia**
+<p align="center">
+<img src="https://i.imgur.com/vDSKcOy.gif" width="267" height="584">
+<p>  
+
+#### **Excluir Contato de Emergencia**
+<p align="center">
+<img src="https://i.imgur.com/xUlPibH.gif" width="267" height="584">
+<p>  
+
+#
+
+
+
+

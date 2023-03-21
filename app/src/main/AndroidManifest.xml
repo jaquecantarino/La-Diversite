@@ -34,13 +34,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.ApoioEmergenciaActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".presentation.HomeActivity"
             android:exported="false">
             <meta-data
@@ -56,6 +49,13 @@
         </activity>
         <activity
             android:name=".presentation.UsuarioCadastroActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".presentation.ContatoEmergenciaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
