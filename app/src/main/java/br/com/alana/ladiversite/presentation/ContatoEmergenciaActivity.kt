@@ -15,18 +15,15 @@ import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
 import com.example.mobcomponents.customtoast.CustomToast
 import java.lang.ref.WeakReference
 
+
 class ContatoEmergenciaActivity : AppCompatActivity() {
 
     private val binding: ActivityContatoEmergenciaBinding by lazy {
-        ActivityContatoEmergenciaBinding.inflate(layoutInflater)
-    }
+        ActivityContatoEmergenciaBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
         binding.edtNomeContato.setText(verificaNome())
@@ -40,43 +37,38 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
         }
 
         binding.atualizarContatoBtn.setOnClickListener {
-            if (binding.atualizarContatoBtn.visibility == View.VISIBLE) {
+            if (binding.atualizarContatoBtn.visibility == View.VISIBLE){
                 CustomToast.success(this, "Contato atualizado!")
-                cadastrarContato(
-                    binding.edtNomeContato.text.toString(),
-                    binding.edtTelefoneContato.text.toString()
-                )
+                cadastrarContato(binding.edtNomeContato.text.toString(),binding.edtTelefoneContato.text.toString())
             }
 
         }
     }
 
-    private fun verificaNome(): String? {
+    private fun verificaNome(): String?{
         val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         return sharedPreferences.getString("contatoNome", "")
     }
 
-    private fun verificaCampos() {
-        if (binding.cadastrarContatoBtn.text.toString() == getText(R.string.excluir)) {
+    private fun verificaCampos(){
+        if (binding.cadastrarContatoBtn.text.toString() == getText(R.string.excluir)){
             CustomToast.info(this, "Contato excluído!")
             cadastrarContato("", "")
         } else {
             CustomToast.success(this, "Contato adicionado!")
-            cadastrarContato(
-                binding.edtNomeContato.text.toString(),
-                binding.edtTelefoneContato.text.toString()
-            )
+            cadastrarContato(binding.edtNomeContato.text.toString(),
+                binding.edtTelefoneContato.text.toString())
         }
     }
 
 
-    private fun verificaTel(): String? {
+    private fun verificaTel(): String?{
         val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         return sharedPreferences.getString("contatoTelefone", "")
     }
 
-    private fun isCadastrado() {
-        if (binding.edtNomeContato.text.isNotEmpty() && binding.edtTelefoneContato.text.isNotEmpty()) {
+    private fun isCadastrado(){
+        if (binding.edtNomeContato.text.isNotEmpty() && binding.edtTelefoneContato.text.isNotEmpty()){
             binding.cadastrarContatoBtn.text = getText(R.string.excluir)
             binding.atualizarContatoBtn.visibility = View.VISIBLE
         } else {
@@ -85,7 +77,7 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
         }
     }
 
-    fun phoneMask() {
+    fun phoneMask(){
         val editText: EditText = binding.edtTelefoneContato
         val country = PhoneNumberFormatType.PT_BR
         val phoneFormatter = PhoneNumberFormatter(WeakReference(editText), country)

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+
 }
 
 android {
@@ -57,5 +58,12 @@ dependencies {
 
     //lib custom toast
     implementation 'com.github.fernandocmartins:Mob-Components:1.0.0'
+
+    //lib google maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    //lib cloud firestore
+    implementation 'com.google.firebase:firebase-firestore:24.4.4'
 
 }

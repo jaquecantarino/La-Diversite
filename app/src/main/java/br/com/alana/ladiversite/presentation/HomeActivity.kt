@@ -36,7 +36,7 @@ class HomeActivity : AppCompatActivity() {
                 CustomToast.warning(this, "É necessário ligar o serviço de localização antes!")
             } else {
                 if (isContatoCadastrado()){
-
+                    startActivity(ContatoEmergenciaMapsActivity.startMapEmergencia(this))
                 } else {
                     CustomToast.warning(this, "É necessário cadastrar um contato primeiro!")
                 }
