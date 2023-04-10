@@ -64,5 +64,36 @@ Entre as possíveis questões relacionadas ao problema, conseguir soluções par
 #
 
 
+## **Sprint 3**
+### **Casos de Uso 4, 5 e 6 (Acionar Contato de emergência, Acionar Botão de Pânico e Consultar Delegacias) e “Esqueci minha senha"**
+#### **Acionar Contato Emergencia (CSU004)**
+##### **Envio da Localização Via WhatsApp e SMS**
+<p align="center">
+<img src="https://i.imgur.com/3jvglwk.gif" width="267" height="584">
+<p>  
 
+##### **Acessando o link do SMS**
+<p align="center">
+<img src="https://i.imgur.com/imDOvBd.gif" width="267" height="584">
+<p>  
+
+##### **Ligação**
+<p align="center">
+<img src="https://i.imgur.com/KR1Ykra.gif" width="267" height="584">
+<p>  
+
+## **Acionar Botão de Pânico (CSU005)**
+<p align="center">
+<img src="https://i.imgur.com/4wxIygl.gif" width="267" height="584">
+<p>  
+
+## **Consultar Delegacias (CSU006)**
+<p align="center">
+<img src="https://i.imgur.com/ZjGqXYF.gif" width="267" height="584">
+<p>  
+
+## **“Esqueci minha senha"**
+<p align="center">
+<img src="https://i.imgur.com/uSmdc9h.gif" width="267" height="584">
+<p>  
 
