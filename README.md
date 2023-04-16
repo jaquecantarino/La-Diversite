@@ -7,7 +7,7 @@
 | Nome | RA |
 | ------------- | ------------- |
 | Alana Roberta Santos da Costa Martins  | 2040482023033  |
-| Diego Mendes Carloni  | 2040482023037  |
+| Diego Mendes Carloni  | 2040482023018  |
 | Jaqueline Cantarino Cassimiro  | 2040482023010  |
 | Mayara Pereira Dotta  | 2040482023049  |
 #
