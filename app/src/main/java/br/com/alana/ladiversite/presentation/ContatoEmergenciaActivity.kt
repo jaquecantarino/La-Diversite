@@ -3,11 +3,18 @@ package br.com.alana.ladiversite.presentation
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityContatoEmergenciaBinding
+import br.com.alana.ladiversite.utils.PhoneNumberFormatType
+import br.com.alana.ladiversite.utils.PhoneNumberFormatter
+import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
 import com.example.mobcomponents.customtoast.CustomToast
+import java.lang.ref.WeakReference
+
 
 class ContatoEmergenciaActivity : AppCompatActivity() {
 
@@ -21,43 +28,70 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
 
         binding.edtNomeContato.setText(verificaNome())
         binding.edtTelefoneContato.setText(verificaTel())
+
+        phoneMask()
         isCadastrado()
+
         binding.cadastrarContatoBtn.setOnClickListener {
-            if (binding.cadastrarContatoBtn.text.toString() == getText(R.string.excluir)){
-                cadastrarContato("", "")
-            } else {
-                cadastrarContato(binding.edtNomeContato.text.toString(),
-                    binding.edtTelefoneContato.text.toString())
+            verificaCampos()
+        }
+
+        binding.atualizarContatoBtn.setOnClickListener {
+            if (binding.atualizarContatoBtn.visibility == View.VISIBLE){
+                CustomToast.success(this, "Contato atualizado!")
+                cadastrarContato(binding.edtNomeContato.text.toString(),binding.edtTelefoneContato.text.toString())
             }
+
         }
     }
     
     private fun verificaNome(): String?{
-        val sharedPreferences = getPreferences(MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         return sharedPreferences.getString("contatoNome", "")
     }
 
+    private fun verificaCampos(){
+        if (binding.cadastrarContatoBtn.text.toString() == getText(R.string.excluir)){
+            CustomToast.info(this, "Contato excluído!")
+            cadastrarContato("", "")
+        } else {
+            CustomToast.success(this, "Contato adicionado!")
+            cadastrarContato(binding.edtNomeContato.text.toString(),
+                binding.edtTelefoneContato.text.toString())
+        }
+    }
+
+
     private fun verificaTel(): String?{
-        val sharedPreferences = getPreferences(MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         return sharedPreferences.getString("contatoTelefone", "")
     }
 
     private fun isCadastrado(){
         if (binding.edtNomeContato.text.isNotEmpty() && binding.edtTelefoneContato.text.isNotEmpty()){
             binding.cadastrarContatoBtn.text = getText(R.string.excluir)
+            binding.atualizarContatoBtn.visibility = View.VISIBLE
         } else {
             binding.cadastrarContatoBtn.text = getText(R.string.confirmar)
+            binding.atualizarContatoBtn.visibility = View.GONE
         }
     }
 
+    fun phoneMask(){
+        val editText: EditText = binding.edtTelefoneContato
+        val country = PhoneNumberFormatType.PT_BR
+        val phoneFormatter = PhoneNumberFormatter(WeakReference(editText), country)
+        editText.addTextChangedListener(phoneFormatter)
+    }
+
+
     private fun cadastrarContato(nome: String, telefone: String) {
-        val sharedPreferences = getPreferences(MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("contatoNome", nome)
-        editor.putString("contatoTelefone", telefone)
-        editor.commit()
+        editor.putString("contatoTelefone", removeNonDigits(telefone))
+        editor.apply()
         finish()
-        CustomToast.success(this, "Contato atualizado!")
     }
 
     companion object {
