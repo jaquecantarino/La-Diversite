@@ -1,16 +1,16 @@
 {
     "acolhidas":[
         {
-            "nome":"casa chama",
+            "nome":"Casa Chama",
             "endereco":"Rua do Carmo 54 Sala 303 Sé São Paulo SP 01019020",
-            "telefone":"+55 11 9.9448-2641",
+            "telefone":"+55 11 9 9448-2641",
             "e-mail":"casachama440@gmail.com",
             "publico-alvo":"Público Alvo: LGBTQIA+",
             "acolhimento":"sim",
-            "atividades":""
+            "atividades":"Psicosocial, jurídico, cultura"
         },
         {
-            "nome":"casa florescer 1 - Centro de Acolhida Especial (CAE)",
+            "nome":"Casa Florescer 1 - Centro de Acolhida Especial (CAE)",
             "endereco":"Rua Prates 1101 Bom Retiro São Paulo SP 01121000",
             "telefone":"+55 11 3228-0502",
             "e-mail":"cadiversidade@gmail.com",
@@ -19,7 +19,7 @@
             "atividades":""
         },
         {
-            "nome":"casa florescer 2 - Centro de Acolhida Especial (CAE)",
+            "nome":"Casa Florescer 2 - Centro de Acolhida Especial (CAE)",
             "endereco":"Rua Capricho 872 Vila Nivi São Paulo SP 02254000",
             "telefone":"+55 11 2337-8459",
             "e-mail":"casachama440@gmail.com",
