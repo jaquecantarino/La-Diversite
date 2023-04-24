@@ -28,11 +28,73 @@ Entre as possíveis questões relacionadas ao problema, conseguir soluções par
 | Linguagem de Programação  | Kotlin  |
 
 #
-## **Demonstração**
+# **Demonstração**
 ![Build](https://img.shields.io/static/v1?label=Versão&message=1.0&color=blue)   
+## **Sprint 1**
+### **Casos de Uso 1 e 2 (Cadastro e Login Usuário)**
+#### **Cadastrar Usuário**
+<p align="center">
+<img src="https://i.imgur.com/pynKVrd.gif" width="267" height="584">
+<p>  
 
-Inserir gifts...
+#### **Logar Usuário**
+<p align="center">
+<img src="https://i.imgur.com/6NmXG2w.gif" width="267" height="584">
+<p>  
 
+#
+
+## **Sprint 2**
+### **Caso de Uso 3 (CRUD contato de emergência)**
+#### **Cadastrar Contato Emergencia**
+<p align="center">
+<img src="https://i.imgur.com/D0znYQH.gif" width="267" height="584">
+<p>  
+
+#### **Atualizar Contato de Emergencia**
+<p align="center">
+<img src="https://i.imgur.com/vDSKcOy.gif" width="267" height="584">
+<p>  
+
+#### **Excluir Contato de Emergencia**
+<p align="center">
+<img src="https://i.imgur.com/xUlPibH.gif" width="267" height="584">
+<p> 
+
+#
+
+## **Sprint 3**
+### **Casos de Uso 4, 5 e 6 (Acionar Contato de emergência, Acionar Botão de Pânico e Consultar Delegacias) e “Esqueci minha senha"**
+#### **Acionar Contato Emergencia**
+##### **Envio da Localização Via WhatsApp e SMS**
+<p align="center">
+<img src="https://i.imgur.com/3jvglwk.gif" width="267" height="584">
+<p>  
+
+##### **Acessando o link do SMS**
+<p align="center">
+<img src="https://i.imgur.com/imDOvBd.gif" width="267" height="584">
+<p>  
+
+##### **Ligação**
+<p align="center">
+<img src="https://i.imgur.com/KR1Ykra.gif" width="267" height="584">
+<p>  
+
+## **Acionar Botão de Pânico**
+<p align="center">
+<img src="https://i.imgur.com/4wxIygl.gif" width="267" height="584">
+<p>  
+
+## **Consultar Delegacias**
+<p align="center">
+<img src="https://i.imgur.com/ZjGqXYF.gif" width="267" height="584">
+<p>  
+
+## **“Esqueci minha senha"**
+<p align="center">
+<img src="https://i.imgur.com/uSmdc9h.gif" width="267" height="584">
+<p>  
 
 
 
