@@ -3,20 +3,14 @@ package br.com.alana.ladiversite.data.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import br.com.alana.ladiversite.data.model.AcolhidaModel
 import br.com.alana.ladiversite.databinding.AcolhidaVhBinding
 import br.com.alana.ladiversite.presentation.AcolhidaDetalheActivity
 
 class AcolhidaAdapter(
     private val context: Context,
-    private val nomeAcolhida: ArrayList<String?>,
-    private val enderecoAcolhida: ArrayList<String?>,
-    private val telefoneAcolhida: ArrayList<String?>,
-    private val emailAcolhida: ArrayList<String?>,
-    private val publicoAcolhida: ArrayList<String?>,
-    private val acolhimentoAcolhida: ArrayList<String?>,
-    private val atividadesAcolhida: ArrayList<String?>
+    private val casaList: ArrayList<AcolhidaModel>
 ):
     RecyclerView.Adapter<AcolhidaAdapter.AcolhidaViewHolder>() {
 
@@ -26,27 +20,31 @@ class AcolhidaAdapter(
     }
 
     override fun onBindViewHolder(holder: AcolhidaViewHolder, position: Int) {
-        holder.nomeCasa.text = nomeAcolhida[position]
-        holder.endereco.text = enderecoAcolhida[position]
-        holder.publicoAlvo.text = publicoAcolhida[position]
-        holder.email.text = emailAcolhida[position]
-        holder.telefone.text = telefoneAcolhida[position]
-        holder.acolhimento.text = acolhimentoAcolhida[position]
-        holder.atividades.text = atividadesAcolhida[position]
+        holder.nomeCasa.text = casaList[position].nome
+        holder.endereco.text = casaList[position].endereco
+        holder.publicoAlvo.text = casaList[position].publico
+        holder.email.text = casaList[position].email
+        holder.telefone.text = casaList[position].telefone
+        holder.acolhimento.text = casaList[position].acolhimento
+        holder.atividades.text = casaList[position].atividades
+        holder.visivel.text = casaList[position].visivel.toString()
 
         holder.card.setOnClickListener{
             context.startActivity(AcolhidaDetalheActivity.startAcolhidaDetalhe(
                 context,
-                nomeAcolhida[position],
-                enderecoAcolhida[position],
-                publicoAcolhida[position],
-                telefoneAcolhida[position],
-                emailAcolhida[position],
-                atividadesAcolhida[position]))
+                casaList[position].nome,
+                casaList[position].endereco,
+                casaList[position].publico,
+                casaList[position].telefone,
+                casaList[position].email,
+                casaList[position].acolhimento,
+                casaList[position].atividades
+                )
+            )
         }
     }
 
-    override fun getItemCount() = nomeAcolhida.size
+    override fun getItemCount() = casaList.size
 
     inner class AcolhidaViewHolder(binding: AcolhidaVhBinding): RecyclerView.ViewHolder(binding.root){
         val nomeCasa = binding.nomeCasa
@@ -57,6 +55,7 @@ class AcolhidaAdapter(
         val email = binding.emailDetalheAcolhida
         val acolhimento = binding.acolhimentoDetalheAcolhida
         val atividades = binding.atividadesDetalheAcolhida
+        val visivel = binding.visivelToggle
     }
 
 }
