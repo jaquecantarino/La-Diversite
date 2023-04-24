@@ -7,6 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red_deny">#9F2250</color>
+    <color name="green_accept">#436971</color>
 
 
     <!-- La Diversité main colors -->
@@ -15,6 +17,7 @@
     <color name="primary_3">#A06D68</color>
     <color name="primary_4">#764A45</color>
     <color name="primary_5">#662D27</color>
+    <color name="blue">#0070C0</color>
     <!-- end colors app -->
 
 </resources>

@@ -18,10 +18,10 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
 
         getDadosAcolhida()
 
-        binding.cardDetalheAcolhida.setOnClickListener{
+        binding.telefoneDetalhe.setOnClickListener{
             val tel = binding.telefoneDetalhe.text.toString()
             if (tel.isNotEmpty())
-                Discador.ligarTelefone(tel, this)
+                Discador.ligarTelefone(tel, this, this@AcolhidaDetalheActivity)
         }
     }
 
@@ -31,6 +31,7 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
         binding.publicoAlvoDetalhe.text = intent.getStringExtra("publico")
         binding.telefoneDetalhe.text = intent.getStringExtra("telefone")
         binding.emailDetalhe.text = intent.getStringExtra("email")
+        binding.acolhidaDetalhe.text = intent.getStringExtra("acolhimento")
         binding.servicosDetalhe.text = intent.getStringExtra("servico")
     }
 
@@ -41,6 +42,7 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
                                  publico: String?,
                                  telefone: String?,
                                  email: String?,
+                                 acolhimento: String?,
                                  servico: String?): Intent {
             val intentDetalhes = Intent(context, AcolhidaDetalheActivity::class.java)
             intentDetalhes.apply {
@@ -49,6 +51,7 @@ class AcolhidaDetalheActivity : AppCompatActivity() {
                 putExtra("publico", publico)
                 putExtra("telefone", telefone)
                 putExtra("email", email)
+                putExtra("acolhimento", acolhimento)
                 putExtra("servico", servico)
             }
             return intentDetalhes

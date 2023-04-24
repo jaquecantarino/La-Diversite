@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <dist:module dist:instant="true" />
 
     <application
         android:allowBackup="true"
@@ -16,13 +28,51 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:theme, android:roundIcon"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.CadastroAcolhidaActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
 
         <activity
+            android:name=".presentation.ContatoEmergenciaMapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_contato_emergencia_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.LeisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.DelegaciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.AcolhidaDetalheActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ContatoEmergenciaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -49,21 +99,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".presentation.ApoioEmergenciaActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".presentation.CadastroContatoEmergenciaActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".presentation.HomeActivity"
+            android:name=".presentation.PsicologosActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
