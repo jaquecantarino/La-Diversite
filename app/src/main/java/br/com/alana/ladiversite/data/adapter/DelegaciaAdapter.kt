@@ -1,5 +1,6 @@
 package br.com.alana.ladiversite.data.adapter
 
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,8 +10,10 @@ import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.AcolhidaVhBinding
 import br.com.alana.ladiversite.databinding.DelegaciaVhBinding
 import br.com.alana.ladiversite.utils.Discador
+import com.example.mobcomponents.customtoast.CustomToast
 
 class DelegaciaAdapter(
+    private val activity: Activity,
     private val context: Context,
     private val delegacia: ArrayList<String?>,
     private val enderecoDeleg: ArrayList<String?>,
@@ -32,11 +35,12 @@ class DelegaciaAdapter(
         holder.telefone.text = telefoneDelegacia[position]
         holder.atividades.text = atividadesDelegacia[position]
 
-        holder.card.setOnClickListener{
+        holder.telefone.setOnClickListener{
             val delega = delegacia[position]
-            Toast.makeText(context, "Ligando para...\n$delega", Toast.LENGTH_SHORT).show()
-            Discador.ligarTelefone(telefoneDelegacia[position], context)
+            CustomToast.info(activity, "Ligando para...\n$delega")
+            Discador.ligarTelefone(telefoneDelegacia[position], context, activity)
         }
+
     }
 
     override fun getItemCount() = delegacia.size
