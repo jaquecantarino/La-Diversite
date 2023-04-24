@@ -32,7 +32,9 @@ class DelegaciaActivity : AppCompatActivity() {
         val recyclerDelegacia = binding.recyclerDelegacia
         recyclerDelegacia.layoutManager = LinearLayoutManager(this)
         recyclerDelegacia.setHasFixedSize(true)
-        adapter = DelegaciaAdapter(this,
+        adapter = DelegaciaAdapter(
+            this@DelegaciaActivity,
+            this,
             delegacia,
             enderecoDelega,
             telefoneDelegacia,

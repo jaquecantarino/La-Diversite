@@ -29,6 +29,6 @@ class PreLoginActivity : AppCompatActivity() {
     }
 
     fun call190(){
-        Discador.ligarTelefone("190",this)
+        Discador.ligarTelefone("190",this, this@PreLoginActivity)
     }
 }
