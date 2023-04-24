@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ContatoEmergenciaActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_contato"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_card_contato"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/label_contato_emergencia"
+                android:text="@string/contato_emerg_ncia"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contato_btn"
+                android:layout_gravity="center"
+                android:layout_width="98dp"
+                android:layout_height="81dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                app:cardElevation="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:id="@+id/btn_ligar_contato"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    
+                    <ImageView
+                        android:id="@+id/logo_contato"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/logo_emergency"/>
+
+                    <TextView
+                        android:id="@+id/label_emergencia"
+                        android:text="@string/emerg_ncia"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textSize="9sp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/label_explicativo"
+            android:text="@string/este_bot_o_faz_uma_liga_o_para_o_contato_de_emerg_ncia_cadastrado"
+            android:layout_width="282dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/label_nome_contato"
+                android:text="@string/nome"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/edt_nome_contato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/label_tel_contato"
+                android:text="@string/telefone_delegacia"
+                android:fontFamily="@font/poppinsmediumitalic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/edt_telefone_contato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+            <Button
+                android:id="@+id/cadastrar_contato_btn"
+                android:layout_width="144dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_corner_btn_dark"
+                android:backgroundTint="@color/primary_4"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppinsmedium"
+                android:inputType="textCapSentences"
+                android:text="@string/confirmar"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextViewEdits" />
+
+            <Button
+                android:id="@+id/atualizar_contato_btn"
+                android:layout_width="144dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_corner_btn_dark"
+                android:backgroundTint="@color/primary_4"
+                android:visibility="visible"
+                android:clickable="true"
+                android:layout_marginBottom="20dp"
+                android:focusable="true"
+                android:fontFamily="@font/poppinsmedium"
+                android:inputType="textCapSentences"
+                android:text="@string/atualizar"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextViewEdits" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
