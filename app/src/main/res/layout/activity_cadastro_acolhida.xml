@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".presentation.CadastroAcolhidaActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_cad_acolhida"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="48dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/cad_acolhida_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/label_sugestao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Sugestão Casa Acolhida"
+                android:textColor="@color/primary_2"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/label_casa"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:text="*Nome da casa:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edt_casa"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="@+id/label_casa"
+                app:layout_constraintTop_toBottomOf="@+id/label_casa"/>
+
+            <TextView
+                android:id="@+id/label_acolhimento"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Faz Acolhimento? (Sim/Não)"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/edt_casa"
+                app:layout_constraintTop_toBottomOf="@+id/edt_casa" />
+
+            <EditText
+                android:id="@+id/edt_acolhimento"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="@+id/edt_casa"
+                app:layout_constraintTop_toBottomOf="@+id/label_acolhimento" />
+
+            <TextView
+                android:id="@+id/label_atividades"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Atividades que fazem:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/edt_acolhimento"
+                app:layout_constraintTop_toBottomOf="@+id/edt_acolhimento" />
+
+            <EditText
+                android:id="@+id/edt_atividades"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="@+id/label_atividades"
+                app:layout_constraintTop_toBottomOf="@+id/label_atividades" />
+
+            <TextView
+                android:id="@+id/label_email"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="*E-mail:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/edt_atividades"
+                app:layout_constraintTop_toBottomOf="@+id/edt_atividades" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="@+id/label_email"
+                app:layout_constraintTop_toBottomOf="@+id/label_email" />
+
+            <TextView
+                android:id="@+id/label_endereco"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Endereço:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/edt_email"
+                app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+            <EditText
+                android:id="@+id/edt_endereco"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="@+id/label_endereco"
+                app:layout_constraintTop_toBottomOf="@+id/label_endereco" />
+
+            <TextView
+                android:id="@+id/label_publico"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Público alvo:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/edt_endereco"
+                app:layout_constraintTop_toBottomOf="@+id/edt_endereco" />
+
+            <EditText
+                android:id="@+id/edt_publico"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="@+id/label_publico"
+                app:layout_constraintTop_toBottomOf="@+id/label_publico" />
+
+            <TextView
+                android:id="@+id/label_telefone"
+                android:layout_marginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="*Telefone:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/edt_publico"
+                app:layout_constraintTop_toBottomOf="@+id/edt_publico" />
+
+            <EditText
+                android:id="@+id/edt_telefone"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="12"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="@+id/label_telefone"
+                app:layout_constraintTop_toBottomOf="@+id/label_telefone" />
+
+            <Button
+                android:id="@+id/cadastrar_casa_btn"
+                android:layout_width="200dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_corner_btn_dark"
+                android:backgroundTint="@color/primary_4"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppinsmedium"
+                android:inputType="textCapSentences"
+                android:text="Enviar Sugestão"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextViewEdits" />
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
