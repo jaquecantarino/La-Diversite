@@ -33,7 +33,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
             if (binding.edtCasa.text.isEmpty()){
                 binding.edtCasa.error = getText(R.string.casa_obrig)
                 camposWarning("Verifique o preenchimento do campo NOME DA CASA!")
-            } else if(!ValidadorDados.isValidEmail(binding.edtEmail.text.toString())){
+            } else if(!ValidadorDados.isValidEmailOnly(binding.edtEmail.text.toString())){
                 binding.edtEmail.error = getText(R.string.email_valid)
                 camposWarning("Verifique o preenchimento do campo E-MAIL!")
             } else if (binding.edtTelefone.text.isEmpty() && binding.edtTelefone.text.length < 10) {
@@ -60,7 +60,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
                         telefone,
                         isUpdate()
                 )
-                startActivity(HomeActivity.startHome(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+                startActivity(AcolhidaActivity.startAcolhida(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
             }
         }
     }
