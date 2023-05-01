@@ -47,6 +47,8 @@ class AdminActivity : AppCompatActivity() {
         btnAprovar.setOnClickListener {
             dialog.dismiss()
             negarCasa(casa)
+            finish()
+            startActivity(AcolhidaActivity.startAcolhida(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
 
         dialog.setCancelable(true)
@@ -74,6 +76,8 @@ class AdminActivity : AppCompatActivity() {
         btnAprovar.setOnClickListener {
             dialog.dismiss()
             aprovarCasa(casa)
+            finish()
+            startActivity(AcolhidaActivity.startAcolhida(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
 
         dialog.setCancelable(true)
@@ -85,7 +89,6 @@ class AdminActivity : AppCompatActivity() {
         db.collection("casas").document(casa).update("visivel", true)
             .addOnSuccessListener {
                 CustomToast.success(this, "Casa aprovada com sucesso!")
-                startActivity(AcolhidaActivity.startAcolhida(this))
             }.addOnFailureListener {
                 CustomToast.warning(this, it.toString())
             }
@@ -93,8 +96,7 @@ class AdminActivity : AppCompatActivity() {
 
     fun negarCasa(casa: String) {
         db.collection("casas").document(casa).delete().addOnSuccessListener {
-                CustomToast.success(this, "Casa excluída com sucesso!")
-                startActivity(AcolhidaActivity.startAcolhida(this))}
+                CustomToast.success(this, "Casa excluída com sucesso!") }
             .addOnFailureListener { CustomToast.warning(this, it.toString()) }
     }
 
