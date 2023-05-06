@@ -15,6 +15,7 @@
         android:text="Negar"
         android:textColor="@color/white"
         android:textSize="11sp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/card_acolhida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editar_casa_btn" />
@@ -28,6 +29,7 @@
         android:text="Aprovar"
         android:textColor="@color/white"
         android:textSize="11sp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/card_acolhida"
         app:layout_constraintEnd_toStartOf="@+id/editar_casa_btn"
         app:layout_constraintStart_toStartOf="parent" />
@@ -40,6 +42,7 @@
         android:text="Editar"
         android:textColor="@color/white"
         android:textSize="11sp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/card_acolhida"
         app:layout_constraintEnd_toStartOf="@+id/negar_btn"
         app:layout_constraintStart_toEndOf="@+id/aprovar_btn" />
