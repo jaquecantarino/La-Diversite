@@ -65,8 +65,8 @@ class AdminActivity : AppCompatActivity() {
         val txtYN = view.findViewById<TextView>(R.id.txt_yes_no)
         val txtLI = view.findViewById<TextView>(R.id.txt_label_inferior)
 
-        labelOK.text = "Confirmar aprovação?"
-        txtYN.text = "Quer mesmo aprovar essa casa?"
+        labelOK.text = getString(R.string.confirmar_aprova_o)
+        txtYN.text = getString(R.string.quer_mesmo_aprovar_essa_casa)
         txtLI.visibility = View.INVISIBLE
 
         btnNegar.setOnClickListener {

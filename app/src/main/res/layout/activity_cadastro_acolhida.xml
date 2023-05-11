@@ -41,7 +41,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Sugestão Casa Acolhida"
+                android:text="@string/sugest_o_casa_acolhida"
                 android:textColor="@color/primary_2"
                 android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
                 android:textStyle="italic"
                 android:textSize="16sp"
                 android:layout_marginTop="20dp"
-                android:text="*Nome da casa:"
+                android:text="@string/nome_da_casa_acolh"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,23 +76,52 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Faz Acolhimento? (Sim/Não)"
+                android:text="@string/esta_casa_faz_acolhimento"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
                 app:layout_constraintStart_toStartOf="@+id/edt_casa"
                 app:layout_constraintTop_toBottomOf="@+id/edt_casa" />
 
-            <EditText
-                android:id="@+id/edt_acolhimento"
-                android:layout_marginStart="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ems="12"
-                android:inputType="text"
-                app:layout_constraintStart_toStartOf="@+id/edt_casa"
-                app:layout_constraintTop_toBottomOf="@+id/label_acolhimento" />
+            <RadioGroup
+                android:id="@+id/toggle_sim_nao"
+                android:checkedButton="@+id/nao"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/control_switch_background_border"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/nao"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/control_switch_background_selector_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/n_o"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/control_switch_color_selector"/>
+                <RadioButton
+                    android:id="@+id/sim"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/control_switch_background_selector_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/sim"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/control_switch_color_selector"/>
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/label_atividades"
@@ -100,12 +129,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Atividades que fazem:"
+                android:text="@string/atividades_que_fazem"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
-                app:layout_constraintStart_toStartOf="@+id/edt_acolhimento"
-                app:layout_constraintTop_toBottomOf="@+id/edt_acolhimento" />
+                app:layout_constraintStart_toStartOf="@+id/toggle_sim_nao"
+                app:layout_constraintTop_toBottomOf="@+id/toggle_sim_nao" />
 
             <EditText
                 android:id="@+id/edt_atividades"
@@ -124,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="*E-mail:"
+                android:text="@string/e_mail_cad"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
@@ -148,7 +177,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Endereço:"
+                android:text="@string/endere_o_acolh"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
@@ -172,7 +201,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Público alvo:"
+                android:text="@string/p_blico_alvo_acol"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
@@ -196,7 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="*Telefone:"
+                android:text="@string/telefone_acol"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
@@ -226,7 +255,7 @@
                 android:focusable="true"
                 android:fontFamily="@font/poppinsmedium"
                 android:inputType="textCapSentences"
-                android:text="Enviar Sugestão"
+                android:text="@string/enviar_sugest_o"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"

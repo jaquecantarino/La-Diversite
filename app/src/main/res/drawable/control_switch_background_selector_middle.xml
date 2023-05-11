@@ -1,0 +1,22 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="@color/primary_5"></solid>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/primary_1"></solid>
+        </shape>
+    </item>
+    <item>
+        <layer-list>
+            <item android:top="-2dp" android:bottom="-2dp" android:left="-2dp">
+                <shape>
+                    <solid android:color="@android:color/transparent"></solid>
+                    <stroke android:width="1dp" android:color="@color/primary_5"></stroke>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

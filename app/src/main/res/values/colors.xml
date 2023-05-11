@@ -18,6 +18,11 @@
     <color name="primary_4">#764A45</color>
     <color name="primary_5">#662D27</color>
     <color name="blue">#0070C0</color>
+
+    <color name="bluebtn">#FF005a9c</color>
+    <color name="lightBlue">#ff6691c4</color>
+    <color name="lighterBlue">#ffcdd8ec</color>
+    <color name="controlBackground">#ffffffff</color>
     <!-- end colors app -->
 
 </resources>

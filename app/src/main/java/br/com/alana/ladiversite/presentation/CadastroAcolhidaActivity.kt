@@ -52,7 +52,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
 
                 cadastrarAcolhida(
                         binding.edtCasa.text.toString(),
-                        binding.edtAcolhimento.text.toString(),
+                        verifyYesNo(),
                         binding.edtAtividades.text.toString(),
                         binding.edtEmail.text.toString(),
                         binding.edtEndereco.text.toString(),
@@ -63,6 +63,10 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
                 startActivity(AcolhidaActivity.startAcolhida(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
             }
         }
+    }
+
+    fun verifyYesNo(): String{
+        return if (binding.sim.isChecked) "Sim" else "Não"
     }
 
     private fun isUpdate(): Boolean {
@@ -97,16 +101,20 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
 
     private fun getDadosAcolhidaFromAdmin(){
         if (intent.hasExtra("nomeTela")){
-            binding.cadastrarCasaBtn.text = "Cadastrar Casa"
+            binding.cadastrarCasaBtn.text = getString(R.string.cadastrar_casa)
             binding.labelSugestao.text = intent.getStringExtra("nomeTela")
             binding.edtCasa.setText(intent.getStringExtra("nomeCasa"))
-            binding.edtAcolhimento.setText(intent.getStringExtra("acolhimento"))
+            binding.toggleSimNao.check(verifyYesNoForAdmin())
             binding.edtAtividades.setText(intent.getStringExtra("atividades"))
             binding.edtEmail.setText(intent.getStringExtra("email"))
             binding.edtEndereco.setText(intent.getStringExtra("endereco"))
             binding.edtPublico.setText(intent.getStringExtra("publico"))
             binding.edtTelefone.setText(intent.getStringExtra("telefone"))
         }
+    }
+
+    fun verifyYesNoForAdmin(): Int{
+        return if (intent.getStringExtra("acolhimento") == "Sim") binding.sim.id else binding.nao.id
     }
 
     fun phoneMask(){
