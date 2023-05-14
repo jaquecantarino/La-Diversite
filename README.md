@@ -54,7 +54,7 @@ Entre as possíveis questões relacionadas ao problema, conseguir soluções par
 ### **Casos de Uso 4, 5 e 6 (Acionar Contato de emergência, Acionar Botão de Pânico e Consultar Delegacias) e “Esqueci minha senha"**
 |  |  |
 | ------------- | ------------- |
-| **Acionar Contato Emergencia** | **Envio da Localização Via WhatsApp e SMS** <p align="center"><img src="https://i.imgur.com/3jvglwk.gif" width="267" height="584"><p> **Acessando o link do SMS** <p align="start"><img src="https://i.imgur.com/imDOvBd.gif" width="267" height="584"><p>     |
+| **Acionar Contato Emergencia** | **Envio da Localização Via WhatsApp e SMS** <p align="center"><img src="https://i.imgur.com/pGWYM96.gif" width="267" height="584"><p> **Acessando o link do SMS** <p align="start"><img src="https://i.imgur.com/imDOvBd.gif" width="267" height="584"><p>     |
 | **Ligação** | <p align="center"><img src="https://i.imgur.com/KR1Ykra.gif" width="267" height="584"><p>       |
 | **Acionar Botão de Pânico**  | <p align="center"><img src="https://i.imgur.com/4wxIygl.gif" width="267" height="584"><p>         |
 | **Consultar Delegacias**  | <p align="center"><img src="https://i.imgur.com/ZjGqXYF.gif" width="267" height="584"><p>         |
@@ -66,11 +66,18 @@ Entre as possíveis questões relacionadas ao problema, conseguir soluções par
 ### **Casos de Uso 7, 10 e 11  (Consultar Casas de Acolhida, Acionar Casa da Acolhida, Sugerir Casa de Acolhida)**   
 |  |  |
 | ------------- | ------------- |
-| Consultar Casas de Acolhida | <p align="center"><img src="https://i.imgur.com/U2wJRSS.gif" width="267" height="584"><p>      |
-| Acionar Casa da Acolhida | <p align="center"><img src="https://i.imgur.com/8qjv5Qw.gif" width="267" height="584"><p>      |
-| Sugerir Casa de Acolhida | <p align="center"><img src="https://i.imgur.com/Y2BSgxu.gif" width="267" height="584"><p>      |
+| **Consultar Casas de Acolhida** | <p align="center"><img src="https://i.imgur.com/U2wJRSS.gif" width="267" height="584"><p>      |
+| **Acionar Casa da Acolhida** | <p align="center"><img src="https://i.imgur.com/8qjv5Qw.gif" width="267" height="584"><p>      |
+| **Sugerir Casa de Acolhida** | <p align="center"><img src="https://i.imgur.com/acV5wwI.gif" width="267" height="584"><p>      |
  
 #
 
 ## **Sprint 5**
-### **Casos de Uso 8, 9 e 12 (Psicologia Social, Leis e Direitos e Manter Casas de Acolhida)**   
+### **Casos de Uso 8, 9 e 12 (Psicologia e Apoio, Leis e Direitos e Manter Casas de Acolhida)**   
+|  |  |
+| ------------- | ------------- |
+| **Manter Casas de Acolhida** | <p align="center"><img src="https://i.imgur.com/goJDPD1.gif" width="267" height="584"><p>      |
+| **Leis e Direitos** |  |
+| **Psicologia e Apoio** |   |
+
+#
