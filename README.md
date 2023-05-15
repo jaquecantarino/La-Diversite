@@ -76,7 +76,7 @@ Entre as possíveis questões relacionadas ao problema, conseguir soluções par
 ### **Casos de Uso 8, 9 e 12 (Psicologia e Apoio, Leis e Direitos e Manter Casas de Acolhida)**   
 |  |  |
 | ------------- | ------------- |
-| **Manter Casas de Acolhida** | <p align="center"><img src="https://i.imgur.com/wTA0DM2.gif" width="267" height="584"><p>      |
+| **Manter Casas de Acolhida** | <p align="center"><img src="https://i.imgur.com/RpGPMNN.gif" width="267" height="584"><p>      |
 | **Leis e Direitos** |  |
 | **Psicologia e Apoio** |   |
 
