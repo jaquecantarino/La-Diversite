@@ -14,6 +14,7 @@ import br.com.alana.ladiversite.utils.PhoneNumberFormatter
 import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
 import com.example.mobcomponents.customtoast.CustomToast
 import java.lang.ref.WeakReference
+import br.com.alana.ladiversite.utils.ValidadorDados
 
 
 class ContatoEmergenciaActivity : AppCompatActivity() {
@@ -55,9 +56,12 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
             CustomToast.info(this, "Contato excluído!")
             cadastrarContato("", "")
         } else {
-            CustomToast.success(this, "Contato adicionado!")
-            cadastrarContato(binding.edtNomeContato.text.toString(),
-                binding.edtTelefoneContato.text.toString())
+            if (binding.edtNomeContato.text.toString().isNotEmpty() && ValidadorDados.isPhoneValid(binding.edtTelefoneContato.text.toString())){
+                CustomToast.success(this, "Contato adicionado!")
+                cadastrarContato(binding.edtNomeContato.text.toString(), binding.edtTelefoneContato.text.toString())
+            } else {
+                CustomToast.warning(this, "Verifique o preenchimento do(s) campo(s)!")
+            }
         }
     }
 

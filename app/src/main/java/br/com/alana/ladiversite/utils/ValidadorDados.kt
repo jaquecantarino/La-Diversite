@@ -9,6 +9,10 @@ class ValidadorDados {
             return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
         }
 
+        fun isPhoneValid(telefone: String): Boolean {
+            return !TextUtils.isEmpty(telefone) && Patterns.PHONE.matcher(telefone).matches() && telefone.length >= 14 && telefone.length <= 15
+        }
+
         fun isValidEmailOnly(email: String): Boolean {
             return Patterns.EMAIL_ADDRESS.matcher(email).matches()
         }
