@@ -49,7 +49,7 @@ class UsuarioCadastroActivity : AppCompatActivity() {
                     CustomToast.success(this, getString(R.string.cadastro_ok))
                     delay()
                 } else {
-                    CustomToast.success(this, getString(R.string.cadastro_nok))
+                    CustomToast.warning(this, getString(R.string.cadastro_nok))
                     clearFields()
                     binding.cadastrarBtn.isEnabled = true
                 }
