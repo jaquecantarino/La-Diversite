@@ -8,5 +8,6 @@ data class AcolhidaModel(
     val endereco: String? = null,
     val publico: String? = null,
     val telefone: String? = null,
-    var visivel: Boolean? = false
+    var visivel: Boolean? = false,
+    var ativo: Boolean? = true
 )

@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/idIVCourse"
-            android:text="Confirmar exclusão?"
+            android:text="Confirmar ação?"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -40,7 +40,7 @@
             android:layout_below="@id/bottom_title_label"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/idIVCourse"
-            android:text="Tem certeza que deseja excluir essa casa?"
+            android:text="Tem certeza que deseja negar esse cadastro?"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
@@ -52,7 +52,7 @@
             android:layout_below="@id/txt_yes_no"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/idIVCourse"
-            android:text="Caso confime, essa ação é irreversível!"
+            android:text="Os dados serão armazenados na nuvem!"
             android:textColor="@color/black"
             android:textSize="12sp" />
 

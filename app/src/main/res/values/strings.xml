@@ -92,4 +92,5 @@
     <string name="enviar_sugest_o">Enviar Sugestão</string>
     <string name="e_mail_cad">E-mail:</string>
     <string name="cadastrar_casa">Cadastrar Casa</string>
+    <string name="cadastrar_nova_casa">Cadastrar nova casa</string>
 </resources>

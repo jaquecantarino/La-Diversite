@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.data.adapter.AcolhidaAdapter
 import br.com.alana.ladiversite.data.model.AcolhidaModel
 import br.com.alana.ladiversite.databinding.ActivityAcolhidaBinding
@@ -29,7 +30,7 @@ class AcolhidaActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
 
-        verifyAdmin()
+        checkAdminData()
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.setHasFixedSize(true)
@@ -67,12 +68,18 @@ class AcolhidaActivity : AppCompatActivity() {
             }
     }
 
-    private fun verifyAdmin(){
-        val fireUser = FirebaseAuth.getInstance().currentUser?.uid
-        if (fireUser!!.equals("wWYLeLPAb5SMsBob5b7j6oRprwZ2")){
+    fun checkAdminData(){
+        if (verifyAdmin()) {
             binding.aprovarBtn.visibility = View.VISIBLE
+            binding.cadastroCasa.text = getString(R.string.cadastrar_nova_casa)
         }
     }
+
+    private fun verifyAdmin(): Boolean{
+        val fireUser = FirebaseAuth.getInstance().currentUser?.uid
+        return fireUser!! == "wWYLeLPAb5SMsBob5b7j6oRprwZ2"
+    }
+
 
     companion object {
         fun startAcolhida(context: Context): Intent {

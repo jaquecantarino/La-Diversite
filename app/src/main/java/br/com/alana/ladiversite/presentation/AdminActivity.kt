@@ -95,9 +95,12 @@ class AdminActivity : AppCompatActivity() {
     }
 
     fun negarCasa(casa: String) {
-        db.collection("casas").document(casa).delete().addOnSuccessListener {
-                CustomToast.success(this, "Casa excluída com sucesso!") }
-            .addOnFailureListener { CustomToast.warning(this, it.toString()) }
+        db.collection("casas").document(casa).update("ativo", false)
+            .addOnSuccessListener {
+                CustomToast.success(this, "Casa negada e armazenada no BD!")
+            }.addOnFailureListener {
+                CustomToast.warning(this, it.toString())
+            }
     }
 
     private fun recuperaDadosFirestore(){
@@ -106,7 +109,7 @@ class AdminActivity : AppCompatActivity() {
                 for (dados in document.documents){
                     val casas: AcolhidaModel? = dados.toObject(AcolhidaModel::class.java)
                     if (casas != null){
-                        if (casas.visivel == false){
+                        if (casas.visivel == false && casas.ativo == true){
                             casaLista.add(casas)
                         }
                     }

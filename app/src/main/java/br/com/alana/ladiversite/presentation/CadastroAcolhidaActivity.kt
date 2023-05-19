@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
 import br.com.alana.ladiversite.R
@@ -14,6 +15,7 @@ import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
 import br.com.alana.ladiversite.utils.ValidadorDados
 import com.example.mobcomponents.customtoast.CustomToast
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.auth.FirebaseAuth
 import java.lang.ref.WeakReference
 
 class CadastroAcolhidaActivity : AppCompatActivity() {
@@ -58,7 +60,8 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
                         binding.edtEndereco.text.toString(),
                         binding.edtPublico.text.toString(),
                         telefone,
-                        isUpdate()
+                        verifyAdmin(),
+                        true
                 )
                 startActivity(AcolhidaActivity.startAcolhida(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
             }
@@ -67,6 +70,11 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
 
     fun verifyYesNo(): String{
         return if (binding.sim.isChecked) "Sim" else "Não"
+    }
+
+    private fun verifyAdmin(): Boolean {
+        val fireUser = FirebaseAuth.getInstance().currentUser?.uid
+        return fireUser!! == "wWYLeLPAb5SMsBob5b7j6oRprwZ2"
     }
 
     private fun isUpdate(): Boolean {
@@ -78,8 +86,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
             .addOnFailureListener { CustomToast.warning(this, it.toString()) }
     }
 
-    private fun cadastrarAcolhida(casa: String, acolhimento: String, atividades: String, email: String, endere: String, publico: String, tel: String, visivel: Boolean) {
-
+    private fun cadastrarAcolhida(casa: String, acolhimento: String, atividades: String, email: String, endere: String, publico: String, tel: String, visivel: Boolean, ativo: Boolean) {
         val casaMap = hashMapOf(
             "nome" to casa,
             "acolhimento" to acolhimento,
@@ -88,7 +95,8 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
             "endereco" to endere,
             "publico" to publico,
             "telefone" to tel,
-            "visivel" to visivel
+            "visivel" to visivel,
+            "ativo" to ativo
         )
 
         dataBaseFire.collection("casas").document(casa)
