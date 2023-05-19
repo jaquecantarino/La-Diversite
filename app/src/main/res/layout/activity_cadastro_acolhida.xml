@@ -85,7 +85,6 @@
 
             <RadioGroup
                 android:id="@+id/toggle_sim_nao"
-                android:checkedButton="@+id/nao"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
