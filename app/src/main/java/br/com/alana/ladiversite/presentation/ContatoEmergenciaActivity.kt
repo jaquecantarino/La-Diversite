@@ -7,14 +7,15 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityContatoEmergenciaBinding
 import br.com.alana.ladiversite.utils.PhoneNumberFormatType
 import br.com.alana.ladiversite.utils.PhoneNumberFormatter
 import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
+import br.com.alana.ladiversite.utils.ValidadorDados
 import com.example.mobcomponents.customtoast.CustomToast
 import java.lang.ref.WeakReference
-import br.com.alana.ladiversite.utils.ValidadorDados
 
 
 class ContatoEmergenciaActivity : AppCompatActivity() {
@@ -38,14 +39,12 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
         }
 
         binding.atualizarContatoBtn.setOnClickListener {
-            if (binding.atualizarContatoBtn.visibility == View.VISIBLE){
-                CustomToast.success(this, "Contato atualizado!")
-                cadastrarContato(binding.edtNomeContato.text.toString(),binding.edtTelefoneContato.text.toString())
+            if (binding.atualizarContatoBtn.isVisible){
+                validaECadastra()
             }
-
         }
     }
-    
+
     private fun verificaNome(): String?{
         val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         return sharedPreferences.getString("contatoNome", "")
@@ -56,15 +55,24 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
             CustomToast.info(this, "Contato excluído!")
             cadastrarContato("", "")
         } else {
-            if (binding.edtNomeContato.text.toString().isNotEmpty() && ValidadorDados.isPhoneValid(binding.edtTelefoneContato.text.toString())){
-                CustomToast.success(this, "Contato adicionado!")
-                cadastrarContato(binding.edtNomeContato.text.toString(), binding.edtTelefoneContato.text.toString())
-            } else {
-                CustomToast.warning(this, "Verifique o preenchimento do(s) campo(s)!")
-            }
+            validaECadastra()
         }
     }
 
+    private fun validaECadastra(){
+        if (binding.edtNomeContato.text.toString().isEmpty()) {
+            CustomToast.warning(this, "Campo nome nao pode estar vazio!")
+        } else if (removeNonDigits(binding.edtTelefoneContato.text.toString()).length < 10){
+            CustomToast.warning(this, "Campo telefone incorreto!")
+        } else {
+            if (binding.atualizarContatoBtn.isVisible){
+                CustomToast.success(this, "Contato atualizado com sucesso!")
+            } else {
+                CustomToast.success(this, "Contato cadastrado com sucesso!")
+            }
+            cadastrarContato(binding.edtNomeContato.text.toString(), binding.edtTelefoneContato.text.toString())
+        }
+    }
 
     private fun verificaTel(): String?{
         val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
@@ -88,7 +96,6 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
         editText.addTextChangedListener(phoneFormatter)
     }
 
-
     private fun cadastrarContato(nome: String, telefone: String) {
         val sharedPreferences = getSharedPreferences("contato", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
@@ -105,3 +112,5 @@ class ContatoEmergenciaActivity : AppCompatActivity() {
     }
 
 }
+
+
