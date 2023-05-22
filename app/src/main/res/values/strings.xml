@@ -93,4 +93,24 @@
     <string name="e_mail_cad">E-mail:</string>
     <string name="cadastrar_casa">Cadastrar Casa</string>
     <string name="cadastrar_nova_casa">Cadastrar nova casa</string>
+    <string name="psico_txt">A população pode ser ajudada por psicólogas e psicólogos a se reestruturar cognitiva, comportamental e emocionalmente. Nos cards abaixo conheça nossos psicólogos parceiros.</string>
+    <string name="nome_mayane_vilela">Nome: Mayane Vilela</string>
+    <string name="crp_06_689312_is">CRP 06/689312-IS</string>
+    <string name="contato_55_11_97313_5332">Contato +55 11 97313-5332</string>
+    <string name="psi_mayanevilela">\@psi_MayaneVilela</string>
+    <string name="nome_manuel_marins_serravale">Nome: Manuel Marins Serravale</string>
+    <string name="crp_06_547144_is">CRP 06/547144-IS</string>
+    <string name="contato_55_11_98699_2776">Contato: +55 11 98699-2776</string>
+    <string name="rea_psicologia_preta">Área: Psicologia Preta</string>
+    <string name="manuelmserravalle_psico">\@ManuelMSerravalle_psico</string>
+    <string name="nome_michele_cretela">Nome: Michele Cretela</string>
+    <string name="crp_06_729671_is">CRP 06/729671-IS</string>
+    <string name="contato_55_11_96733_8697">Contato: +55 11 96733-8697</string>
+    <string name="rea_psicologia_afirmativa">Área: Psicologia Afirmativa</string>
+    <string name="michelecretela_psi">\@MicheleCretela_psi</string>
+    <string name="nome_alex_amancio">Nome: Alex Amancio</string>
+    <string name="crp_06_663921_is">CRP 06/663921-IS</string>
+    <string name="contato_55_11_98558_2156">Contato: +55 11 98558-2156</string>
+    <string name="rea_psicologia_social">Área: Psicologia Social</string>
+    <string name="aamancio_psi">\@AAmancio_psi</string>
 </resources>
