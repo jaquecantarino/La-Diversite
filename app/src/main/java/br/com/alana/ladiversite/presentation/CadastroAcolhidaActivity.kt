@@ -24,6 +24,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(binding.root)
+        alterLabelForAdmin()
         getDadosAcolhidaFromAdmin()
         phoneMask()
         binding.cadastrarCasaBtn.setOnClickListener {
@@ -53,7 +54,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
                     binding.edtEndereco.text.toString(),
                     binding.edtPublico.text.toString(),
                     telefone,
-                    verifyAdmin(),
+                    isAdmin(),
                     true
                 )
                 startActivity(AcolhidaActivity.startAcolhida(this).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
@@ -72,13 +73,22 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
         }
     }
 
-    private fun verifyAdmin(): Boolean{
+    fun alterLabelForAdmin() {
+        if (isAdmin()) {
+            binding.labelSugestao.text = getString(R.string.cadastrar_casa_admin)
+            binding.cadastrarCasaBtn.text = getString(R.string.cadastrar_admin_btn)
+        }
+    }
+
+    private fun isAdmin(): Boolean{
         val fireUser = FirebaseAuth.getInstance().currentUser?.uid
         return fireUser!! == "wWYLeLPAb5SMsBob5b7j6oRprwZ2"
     }
+
     private fun isUpdate(): Boolean{
         return intent.hasExtra("nomeTela")
     }
+
     private fun apagaCasa(casa: String){
         dataBaseFire.collection("casas").document(casa).delete().addOnSuccessListener {}
             .addOnFailureListener { CustomToast.warning(this, it.toString()) }
@@ -102,6 +112,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
                 CustomToast.error(this, "Erro no envio dos dados!")
             }
     }
+
     private fun getDadosAcolhidaFromAdmin(){
         if (intent.hasExtra("nomeTela")){
             binding.cadastrarCasaBtn.text = getString(R.string.cadastrar_casa)
@@ -115,18 +126,22 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
             binding.edtTelefone.setText(intent.getStringExtra("telefone"))
         }
     }
+
     fun verifyYesNoForAdmin(): Int{
         return if (intent.getStringExtra("acolhimento") == "Sim") binding.sim.id else binding.nao.id
     }
+
     fun phoneMask(){
         val editText: EditText = binding.edtTelefone
         val country = PhoneNumberFormatType.PT_BR
         val phoneFormatter = PhoneNumberFormatter(WeakReference(editText), country)
         editText.addTextChangedListener(phoneFormatter)
     }
+
     private fun camposWarning(msg: String){
         CustomToast.warning(this, msg)
     }
+
     companion object {
         fun startCadastroAcolhida(context: Context): Intent {
             return Intent(context, CadastroAcolhidaActivity::class.java)
