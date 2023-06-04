@@ -8,9 +8,7 @@ import android.view.WindowManager
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityLeisBinding
 import br.com.alana.ladiversite.utils.Utils
-
 class LeisActivity : AppCompatActivity() {
-
     private val binding: ActivityLeisBinding by lazy { ActivityLeisBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +16,7 @@ class LeisActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.cardLeis.setOnClickListener{ Utils.acessarLink(getString(R.string.jusbrasil_url), this) }
+
     }
 
     companion object {
