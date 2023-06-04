@@ -33,10 +33,10 @@ class PsicologosActivity : AppCompatActivity() {
     }
 
     private fun initInstaPsicologos() {
-        binding.ps1Insta.setOnClickListener { Utils.acessarLink("http://www.google.com.br", this) }
-        binding.ps2Insta.setOnClickListener { Utils.acessarLink("http://www.google.com.br", this) }
-        binding.ps3Insta.setOnClickListener { Utils.acessarLink("http://www.google.com.br", this) }
-        binding.ps4Insta.setOnClickListener { Utils.acessarLink("http://www.google.com.br", this) }
+        binding.ps1Insta.setOnClickListener { Utils.acessarLink("https://jaquecantarino.github.io/page-ladiversite/", this) }
+        binding.ps2Insta.setOnClickListener { Utils.acessarLink("https://jaquecantarino.github.io/page-ladiversite/", this) }
+        binding.ps3Insta.setOnClickListener { Utils.acessarLink("https://jaquecantarino.github.io/page-ladiversite/", this) }
+        binding.ps4Insta.setOnClickListener { Utils.acessarLink("https://jaquecantarino.github.io/page-ladiversite/", this) }
     }
 
     companion object {
