@@ -11,6 +11,7 @@ import android.view.WindowManager
 import androidx.core.location.LocationManagerCompat
 import br.com.alana.ladiversite.databinding.ActivityHomeBinding
 import br.com.alana.ladiversite.utils.Discador
+import br.com.alana.ladiversite.utils.Utils
 import com.example.mobcomponents.customtoast.CustomToast
 
 class HomeActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@HomeActivity)
         setContentView(binding.root)
         preferencias = PreferenceManager.getDefaultSharedPreferences(this)
 

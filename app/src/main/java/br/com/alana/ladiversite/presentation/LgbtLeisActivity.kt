@@ -13,6 +13,7 @@ class LgbtLeisActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Utils.setFullScreen(this@LgbtLeisActivity)
         setContentView(binding.root)
 
         initLinkCardsLgbt()

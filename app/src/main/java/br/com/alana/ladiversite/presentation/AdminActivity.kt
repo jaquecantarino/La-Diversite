@@ -12,6 +12,7 @@ import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.data.adapter.AdminAdapter
 import br.com.alana.ladiversite.data.model.AcolhidaModel
 import br.com.alana.ladiversite.databinding.ActivityAdminBinding
+import br.com.alana.ladiversite.utils.Utils
 import com.example.mobcomponents.customtoast.CustomToast
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.firestore.FirebaseFirestore
@@ -25,6 +26,7 @@ class AdminActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Utils.setFullScreen(this@AdminActivity)
         setContentView(binding.root)
 
         binding.recyclerAcolhida.layoutManager = LinearLayoutManager(this@AdminActivity)

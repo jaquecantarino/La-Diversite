@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.alana.ladiversite.data.adapter.DelegaciaAdapter
 import br.com.alana.ladiversite.databinding.ActivityDelegaciaBinding
+import br.com.alana.ladiversite.utils.Utils
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
@@ -26,7 +27,7 @@ class DelegaciaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@DelegaciaActivity)
         setContentView(binding.root)
 
         val recyclerDelegacia = binding.recyclerDelegacia

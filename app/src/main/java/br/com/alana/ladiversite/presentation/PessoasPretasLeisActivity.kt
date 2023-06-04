@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.alana.ladiversite.R
+import android.view.WindowManager
 import br.com.alana.ladiversite.databinding.ActivityPessoasPretasLeisBinding
 import br.com.alana.ladiversite.utils.Utils
 
@@ -14,6 +15,7 @@ class PessoasPretasLeisActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Utils.setFullScreen(this@PessoasPretasLeisActivity)
         setContentView(binding.root)
 
         initLinkCardsPretas()

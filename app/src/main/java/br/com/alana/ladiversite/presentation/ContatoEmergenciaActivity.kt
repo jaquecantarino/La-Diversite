@@ -12,6 +12,7 @@ import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityContatoEmergenciaBinding
 import br.com.alana.ladiversite.utils.PhoneNumberFormatType
 import br.com.alana.ladiversite.utils.PhoneNumberFormatter
+import br.com.alana.ladiversite.utils.Utils
 import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
 import br.com.alana.ladiversite.utils.ValidadorDados
 import com.example.mobcomponents.customtoast.CustomToast
@@ -20,12 +21,11 @@ import java.lang.ref.WeakReference
 
 class ContatoEmergenciaActivity : AppCompatActivity() {
 
-    private val binding: ActivityContatoEmergenciaBinding by lazy {
-        ActivityContatoEmergenciaBinding.inflate(layoutInflater) }
+    private val binding: ActivityContatoEmergenciaBinding by lazy { ActivityContatoEmergenciaBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@ContatoEmergenciaActivity)
         setContentView(binding.root)
 
         binding.edtNomeContato.setText(verificaNome())

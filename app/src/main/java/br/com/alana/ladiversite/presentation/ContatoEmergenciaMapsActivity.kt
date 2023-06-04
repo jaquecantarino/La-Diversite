@@ -22,6 +22,7 @@ import androidx.core.location.LocationManagerCompat
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityContatoEmergenciaMapsBinding
 import br.com.alana.ladiversite.utils.Discador
+import br.com.alana.ladiversite.utils.Utils
 import com.example.mobcomponents.customtoast.CustomToast
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -51,10 +52,8 @@ class ContatoEmergenciaMapsActivity : AppCompatActivity(), OnMapReadyCallback, G
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Utils.setFullScreen(this@ContatoEmergenciaMapsActivity)
         setContentView(binding.root)
-
-        //seta FULLSCREEN
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         //verifica se o servico de locale está ligado
         if (!isLocationEnabled(this))

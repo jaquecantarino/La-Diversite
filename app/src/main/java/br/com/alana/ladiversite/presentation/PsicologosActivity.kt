@@ -15,7 +15,7 @@ class PsicologosActivity : AppCompatActivity() {
     private val binding: ActivityPsicologosBinding by lazy { ActivityPsicologosBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@PsicologosActivity)
         setContentView(binding.root)
 
         binding.cardPsico1.setOnClickListener { Utils.acessarLink(getString(R.string.psico_url1), this) }

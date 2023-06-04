@@ -8,14 +8,42 @@ import android.view.WindowManager
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityLeisBinding
 import br.com.alana.ladiversite.utils.Utils
+
 class LeisActivity : AppCompatActivity() {
     private val binding: ActivityLeisBinding by lazy { ActivityLeisBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@LeisActivity)
         setContentView(binding.root)
 
-        binding.cardLeis.setOnClickListener{ Utils.acessarLink(getString(R.string.jusbrasil_url), this) }
+        initCards()
+    }
+
+
+    private fun initCards() {
+        binding.cardMulher.setOnClickListener { startActivity(MulheresLeisActivity.startMulher(this)) }
+        binding.cardLgbt.setOnClickListener { startActivity(LgbtLeisActivity.startLgbt(this)) }
+        binding.cardPretas.setOnClickListener {
+            startActivity(
+                PessoasPretasLeisActivity.startPessoasPretas(
+                    this
+                )
+            )
+        }
+        binding.cardCrimesSex.setOnClickListener {
+            startActivity(
+                CrimesSexuaisLeisActivity.startCrimesSexuais(
+                    this
+                )
+            )
+        }
+        binding.cardDireitosApoio.setOnClickListener {
+            startActivity(
+                DireitosApoioLeisActivity.startDireitosApoio(
+                    this
+                )
+            )
+        }
 
     }
 

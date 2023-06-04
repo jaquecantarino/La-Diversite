@@ -14,6 +14,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityLoginBinding
+import br.com.alana.ladiversite.utils.Utils
 import br.com.alana.ladiversite.utils.ValidadorDados
 import com.example.mobcomponents.customtoast.CustomToast
 import com.google.firebase.auth.FirebaseAuth
@@ -27,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@LoginActivity)
         setContentView(binding.root)
 
         auth = Firebase.auth // inicia a instancia do firebase auth

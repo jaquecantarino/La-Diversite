@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityDireitosApoioLeisBinding
+import br.com.alana.ladiversite.utils.Utils
 
 class DireitosApoioLeisActivity : AppCompatActivity() {
 
@@ -13,6 +14,7 @@ class DireitosApoioLeisActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Utils.setFullScreen(this@DireitosApoioLeisActivity)
         setContentView(binding.root)
     }
 

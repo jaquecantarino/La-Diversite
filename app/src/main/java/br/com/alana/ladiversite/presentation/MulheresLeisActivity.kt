@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.alana.ladiversite.databinding.ActivityMulheresLeisBinding
+import android.view.WindowManager
 import br.com.alana.ladiversite.utils.Utils
 
 class MulheresLeisActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class MulheresLeisActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Utils.setFullScreen(this@MulheresLeisActivity)
         setContentView(binding.root)
 
         initLinkCards()

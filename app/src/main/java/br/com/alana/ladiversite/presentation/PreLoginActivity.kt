@@ -5,13 +5,14 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import br.com.alana.ladiversite.databinding.ActivityPreLoginBinding
 import br.com.alana.ladiversite.utils.Discador
+import br.com.alana.ladiversite.utils.Utils
 
 class PreLoginActivity : AppCompatActivity() {
 
     private val binding: ActivityPreLoginBinding by lazy { ActivityPreLoginBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@PreLoginActivity)
         setContentView(binding.root)
 
         binding.loginBtn.setOnClickListener { goToLogin() }

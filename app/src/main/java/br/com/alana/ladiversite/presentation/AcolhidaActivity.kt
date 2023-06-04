@@ -12,6 +12,7 @@ import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.data.adapter.AcolhidaAdapter
 import br.com.alana.ladiversite.data.model.AcolhidaModel
 import br.com.alana.ladiversite.databinding.ActivityAcolhidaBinding
+import br.com.alana.ladiversite.utils.Utils
 import com.example.mobcomponents.customtoast.CustomToast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -27,7 +28,7 @@ class AcolhidaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@AcolhidaActivity)
         setContentView(binding.root)
 
         checkAdminData()

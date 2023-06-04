@@ -15,6 +15,7 @@ import com.example.mobcomponents.customtoast.CustomToast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import br.com.alana.ladiversite.utils.Utils
 
 class UsuarioCadastroActivity : AppCompatActivity() {
 
@@ -23,7 +24,7 @@ class UsuarioCadastroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@UsuarioCadastroActivity)
         setContentView(binding.root)
 
         auth = Firebase.auth

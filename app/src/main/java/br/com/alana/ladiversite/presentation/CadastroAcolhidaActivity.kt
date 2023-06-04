@@ -10,6 +10,7 @@ import br.com.alana.ladiversite.R
 import br.com.alana.ladiversite.databinding.ActivityCadastroAcolhidaBinding
 import br.com.alana.ladiversite.utils.PhoneNumberFormatType
 import br.com.alana.ladiversite.utils.PhoneNumberFormatter
+import br.com.alana.ladiversite.utils.Utils
 import br.com.alana.ladiversite.utils.Utils.Companion.removeNonDigits
 import br.com.alana.ladiversite.utils.ValidadorDados
 import com.example.mobcomponents.customtoast.CustomToast
@@ -22,7 +23,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
     private val dataBaseFire = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@CadastroAcolhidaActivity)
         setContentView(binding.root)
         alterLabelForAdmin()
         getDadosAcolhidaFromAdmin()

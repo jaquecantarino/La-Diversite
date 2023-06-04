@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.view.WindowManager
 import br.com.alana.ladiversite.databinding.ActivityAcolhidaDetalheBinding
 import br.com.alana.ladiversite.utils.Discador
+import br.com.alana.ladiversite.utils.Utils
 
 class AcolhidaDetalheActivity : AppCompatActivity() {
 
     private val binding: ActivityAcolhidaDetalheBinding by lazy { ActivityAcolhidaDetalheBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        Utils.setFullScreen(this@AcolhidaDetalheActivity)
         setContentView(binding.root)
 
         getDadosAcolhida()
