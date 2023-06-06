@@ -36,7 +36,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
             } else if(!binding.edtEmail.text.isEmpty() && !ValidadorDados.isValidEmailOnly(binding.edtEmail.text.toString())){
                 binding.edtEmail.error = getText(R.string.email_valid)
                 camposWarning("Verifique o preenchimento do campo E-MAIL!")
-            } else if (binding.edtTelefone.text.isEmpty() && binding.edtTelefone.text.length < 10) {
+            } else if (removeNonDigits(binding.edtTelefone.text.toString()).length < 10) {
                 binding.edtTelefone.error = getText(R.string.telefone_obrig)
                 camposWarning("Verifique o preenchimento do campo TELEFONE!")
             } else {

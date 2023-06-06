@@ -28,7 +28,7 @@ class LgbtLeisActivity : AppCompatActivity() {
         binding.cardJuventude.setOnClickListener { Utils.acessarLink("https://presrepublica.jusbrasil.com.br/legislacao/1035680/lei-12852-13#art-17", this) }
         binding.cardUniao.setOnClickListener { Utils.acessarLink("https://presrepublica.jusbrasil.com.br/legislacao/91577/codigo-civil-lei-10406-02#art-1723", this) }
         binding.cardHomoNaoDoenca.setOnClickListener { Utils.acessarLink("https://site.cfp.org.br/resolucao-01-99/historico/#:~:text=Em%20vigor%20h%C3%A1%2018%20anos,homossexuais%20para%20tratamentos%20n%C3%A3o%20solicitados", this) }
-        binding.cardCirurgia.setOnClickListener { Utils.acessarLink("https://bichadajustica.com/blog/lgbtqia-ja-podem-doar-sangue/ ", this) }
+        binding.cardCirurgia.setOnClickListener { Utils.acessarLink("https://bichadajustica.com/blog/cirurgia-trans-pelo-sus-direito/", this) }
     }
 
     companion object {

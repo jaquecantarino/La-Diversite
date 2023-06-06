@@ -250,7 +250,7 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppinsregular"
                 android:gravity="center"
-                android:text="Psicologia \nSocial"
+                android:text="Psicologia e \nApoio"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
         </LinearLayout>
