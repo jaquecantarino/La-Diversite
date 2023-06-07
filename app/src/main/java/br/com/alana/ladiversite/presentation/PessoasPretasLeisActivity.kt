@@ -29,7 +29,7 @@ class PessoasPretasLeisActivity : AppCompatActivity() {
 
     companion object {
         fun startPessoasPretas(context: Context): Intent {
-            return Intent(context, MulheresLeisActivity::class.java)
+            return Intent(context, PessoasPretasLeisActivity::class.java)
         }
     }
 }
