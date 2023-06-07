@@ -14,7 +14,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.telephony.SmsManager
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -128,8 +127,8 @@ class ContatoEmergenciaMapsActivity : AppCompatActivity(), OnMapReadyCallback, G
     }
 
     fun getTelefoneContato(): String?{
-            preferencias = getSharedPreferences("contato", MODE_PRIVATE)
-            return preferencias.getString("contatoTelefone", "")
+        preferencias = getSharedPreferences("contato", MODE_PRIVATE)
+        return preferencias.getString("contatoTelefone", "")
     }
 
 
@@ -158,7 +157,7 @@ class ContatoEmergenciaMapsActivity : AppCompatActivity(), OnMapReadyCallback, G
         //verifica se tem permissao de acesso a localizacao
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             //solicita permissao ao usuario
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE)
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE)
             return
         }
         mMap.isMyLocationEnabled = true

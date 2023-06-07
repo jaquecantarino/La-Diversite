@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.EditText
 import br.com.alana.ladiversite.R
@@ -19,20 +20,23 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.lang.ref.WeakReference
 
 class CadastroAcolhidaActivity : AppCompatActivity() {
+
     private val binding: ActivityCadastroAcolhidaBinding by lazy { ActivityCadastroAcolhidaBinding.inflate(layoutInflater) }
     private val dataBaseFire = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Utils.setFullScreen(this@CadastroAcolhidaActivity)
         setContentView(binding.root)
+
         alterLabelForAdmin()
         getDadosAcolhidaFromAdmin()
         phoneMask()
+
         binding.cadastrarCasaBtn.setOnClickListener {
             if (binding.edtCasa.text.isEmpty()){
                 binding.edtCasa.error = getText(R.string.casa_obrig)
                 camposWarning("Verifique o preenchimento do campo NOME DA CASA!")
-            } else if(!ValidadorDados.isValidEmailOnly(binding.edtEmail.text.toString())){
             } else if(!binding.edtEmail.text.isEmpty() && !ValidadorDados.isValidEmailOnly(binding.edtEmail.text.toString())){
                 binding.edtEmail.error = getText(R.string.email_valid)
                 camposWarning("Verifique o preenchimento do campo E-MAIL!")
@@ -40,13 +44,16 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
                 binding.edtTelefone.error = getText(R.string.telefone_obrig)
                 camposWarning("Verifique o preenchimento do campo TELEFONE!")
             } else {
+
                 val phone = removeNonDigits(binding.edtTelefone.text.toString())
                 val telefone = "+55 $phone"
+
                 if (isUpdate()){
                     val oldCasa = intent.getStringExtra("nomeCasa")
                     if (oldCasa.toString() != binding.edtCasa.text.toString())
                         apagaCasa(oldCasa.toString())
                 }
+
                 cadastrarAcolhida(
                     binding.edtCasa.text.toString(),
                     verifyYesNo(),
@@ -64,7 +71,6 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
     }
 
     fun verifyYesNo(): String{
-        return if (binding.sim.isChecked) "Sim" else "Não"
         if (binding.sim.isChecked) {
             return "Sim"
         } else if (binding.nao.isChecked) {
@@ -75,7 +81,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
     }
 
     fun alterLabelForAdmin() {
-        if (isAdmin()) {
+        if (isAdmin()){
             binding.labelSugestao.text = getString(R.string.cadastrar_casa_admin)
             binding.cadastrarCasaBtn.text = getString(R.string.cadastrar_admin_btn)
         }
@@ -94,7 +100,9 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
         dataBaseFire.collection("casas").document(casa).delete().addOnSuccessListener {}
             .addOnFailureListener { CustomToast.warning(this, it.toString()) }
     }
+
     private fun cadastrarAcolhida(casa: String, acolhimento: String, atividades: String, email: String, endere: String, publico: String, tel: String, visivel: Boolean, ativo: Boolean) {
+
         val casaMap = hashMapOf(
             "nome" to casa,
             "acolhimento" to acolhimento,
@@ -106,6 +114,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
             "visivel" to visivel,
             "ativo" to ativo
         )
+
         dataBaseFire.collection("casas").document(casa)
             .set(casaMap).addOnCompleteListener {
                 CustomToast.success(this, "Enviado com sucesso!")
@@ -147,6 +156,7 @@ class CadastroAcolhidaActivity : AppCompatActivity() {
         fun startCadastroAcolhida(context: Context): Intent {
             return Intent(context, CadastroAcolhidaActivity::class.java)
         }
+
         fun startAcolhidaEdicao(context: Context,
                                 nomeTela: String?,
                                 nomeCasa: String?,
